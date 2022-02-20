@@ -8,6 +8,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
+import 'swiper/components/effect-fade/effect-fade.min.css';
+
+import 'aos/dist/aos.css';
+
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 import Style from '../app-data/shared/styles/global.style';
 // Material UI support
@@ -17,7 +22,6 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { AppProps } from 'next/app';
 import { SnackbarProvider } from 'notistack';
 import { AuthProvider } from '../app-data/shared/hooks';
-import { OnlyClientProvider } from '../app-data/shared/hooks/useOnlyClient';
 
 function App({ Component, pageProps }: AppProps) {
   React.useEffect(() => {
@@ -43,17 +47,15 @@ function App({ Component, pageProps }: AppProps) {
       <ApolloProvider>
         <AuthProvider>
           <Style />
-          <OnlyClientProvider>
-            <GoogleReCaptchaProvider reCaptchaKey="">
-              <SnackbarProvider
-                maxSnack={3}
-                anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-                resumeHideDuration={10}
-              >
-                <Component {...pageProps} />
-              </SnackbarProvider>
-            </GoogleReCaptchaProvider>
-          </OnlyClientProvider>
+          <GoogleReCaptchaProvider reCaptchaKey="">
+            <SnackbarProvider
+              maxSnack={3}
+              anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+              resumeHideDuration={10}
+            >
+              <Component {...pageProps} />
+            </SnackbarProvider>
+          </GoogleReCaptchaProvider>
         </AuthProvider>
       </ApolloProvider>
     </>

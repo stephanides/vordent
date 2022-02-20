@@ -51,7 +51,7 @@ export const storePdf: (fileData: any) => Promise<string | Error> = (
 
     const dir: string = path.resolve(
       __dirname,
-      `../../../../static/${dirName}`
+      `../../../../public/static/${dirName}`
     );
     const filePath: string = `${dir}/${fileName.toLowerCase()}.${extension}`;
 
@@ -95,7 +95,7 @@ export const storeFile: (fileData: any) => Promise<string | Error> = (
 
     const dir: string = path.resolve(
       __dirname,
-      `../../../../static/${dirName}`
+      `../../../../public/static/${dirName}`
     );
     const filePath: string = `${dir}/${fileName.toLowerCase()}.${ext}`;
 

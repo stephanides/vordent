@@ -11,6 +11,7 @@ export interface IBlog extends Document {
   deleted: boolean;
   slug: string;
   content: string;
+  readingTime: number;
 }
 
 const BlogSchema = new mongoose.Schema({
@@ -30,6 +31,7 @@ const BlogSchema = new mongoose.Schema({
   },
   slug: String,
   content: String,
+  readingTime: Number,
 });
 
 const Blog = mongoose.model<IBlog>('Blog', BlogSchema);

@@ -16,7 +16,7 @@ const domain: string =
   process.env.NODE_ENV === 'production' ? 'vordent.sk' : 'localhost'; // change this to domain
 const protocol: string =
   process.env.NODE_ENV === 'production' ? 'https' : 'http'; // change this to https
-const port: number = 3099;
+const port = Number(process.env.PORT) || 3199;
 export const API_URL: string =
   process.env.NODE_ENV === 'production'
     ? `${protocol}://${domain}/api`

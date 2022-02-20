@@ -44,3 +44,78 @@ export const SEND_CONTACT_FORM_MUTATION = gql`
     sendContactForm(contactFormData: $contactFormData)
   }
 `;
+
+export const CREATE_BLOGCATEGORY_MUTATION = gql`
+  mutation createBlogCategory($blogCategoryInput: BlogCategoryInput!) {
+    createBlogCategory(blogCategoryInput: $blogCategoryInput) {
+      _id
+      title
+    }
+  }
+`;
+
+export const UPDATE_BLOGCATEGORY_MUTATION = gql`
+  mutation updateBlogCategory(
+    $_id: String!
+    $blogCategoryInput: BlogCategoryInput!
+  ) {
+    updateBlogCategory(_id: $_id, blogCategoryInput: $blogCategoryInput) {
+      _id
+      title
+    }
+  }
+`;
+
+export const REMOVE_BLOGCATEGORY_MUTATION = gql`
+  mutation removeBlogCategory($_id: String!) {
+    removeBlogCategory(_id: $_id)
+  }
+`;
+
+export const CREATE_BLOG_MUTATION = gql`
+  mutation createBlog($blogInput: BlogInput!) {
+    createBlog(blogInput: $blogInput) {
+      _id
+      image {
+        path
+      }
+      title
+      category
+      description
+      dateCreated
+      dateDeleted
+      dateModified
+      deleted
+      slug
+      content
+      readingTime
+    }
+  }
+`;
+
+export const UPDATE_BLOG_MUTATION = gql`
+  mutation updateBlog($id: String!, $blogInput: BlogInput!) {
+    updateBlog(id: $id, blogInput: $blogInput) {
+      _id
+      image {
+        path
+      }
+      title
+      category
+      description
+      dateCreated
+      dateDeleted
+      dateModified
+      deleted
+      slug
+      content
+      readingTime
+    }
+  }
+`;
+
+export const REMOVE_BLOG_MUTATION = gql`
+  mutation removeBlog($_id: String!) {
+    removeBlog(_id: $_id)
+  }
+`;

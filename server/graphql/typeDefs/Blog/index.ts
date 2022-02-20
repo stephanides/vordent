@@ -12,6 +12,7 @@ const Blog = gql`
     deleted: Boolean
     slug: String
     content: String
+    readingTime: Int
   }
 
   input BlogImageTypeInput {
@@ -41,6 +42,7 @@ const Blog = gql`
     deleted: Boolean
     slug: String
     content: String
+    readingTime: Int
   }
 `;
 

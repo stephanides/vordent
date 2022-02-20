@@ -13,9 +13,13 @@ import removeBlog from './mutation/RemoveBlog';
 import blogs from './query/Blogs';
 import blog from './query/Blog';
 import blogBySlug from './query/BlogsBySlug';
+import createBlogCategory from './mutation/CreateBlogCategory';
+import updateBlogCategory from './mutation/UpdateBlogCategory';
+import removeBlogCategory from './mutation/RemoveBlogCategory';
 import { sendContactForm } from './mutation/ContactForm';
 
 import validateUser from './mutation/ValidateUser';
+import blogCategories from './query/BlogCategories';
 
 const resolvers = {
   Query: {
@@ -24,6 +28,7 @@ const resolvers = {
     blog: async (root: any, args: any, ctx: any) => blog(root, args, ctx),
     blogBySlug: async (root: any, args: any, ctx: any) =>
       blogBySlug(root, args, ctx),
+    blogCategories: async () => blogCategories(),
   },
   Mutation: {
     loginUser: async (root: any, args: any, ctx: any) =>
@@ -42,6 +47,12 @@ const resolvers = {
       sendContactForm(root, args, ctx),
     validateUser: async (root: any, args: any, ctx: any) =>
       validateUser(root, args, ctx),
+    createBlogCategory: async (root: any, args: any, ctx: any) =>
+      createBlogCategory(root, args, ctx),
+    updateBlogCategory: async (root: any, args: any, ctx: any) =>
+      updateBlogCategory(root, args, ctx),
+    removeBlogCategory: async (root: any, args: any, ctx: any) =>
+      removeBlogCategory(root, args, ctx),
   },
 };
 

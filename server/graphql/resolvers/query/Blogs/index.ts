@@ -7,7 +7,9 @@ const blogs: (root: any, args: any, ctx: any) => Promise<IBlog[]> = async (
   ctx
 ) => {
   try {
-    const blogs = await Blog.find();
+    const blogs = categoryId
+      ? await Blog.find({ category: categoryId })
+      : await Blog.find();
 
     return blogs.reverse();
   } catch (err) {

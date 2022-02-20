@@ -1,11 +1,18 @@
 import { gql } from 'apollo-server-express';
 
 const rootTypeDefs = gql`
+  type BlogWithCategory {
+    blog: Blog
+    categoryTitle: String
+  }
+
   type Query {
     users: [User]
 
+    blogCategories: [BlogCategory]
+
     blog(id: String!): Blog
-    blogBySlug(slug: String!): Blog
+    blogBySlug(slug: String!): BlogWithCategory
     blogs(categoryId: String): [Blog]
   }
 
@@ -17,6 +24,13 @@ const rootTypeDefs = gql`
     createBlog(blogInput: BlogInput!): Blog
     updateBlog(id: String!, blogInput: BlogInput!): Blog
     removeBlog(_id: String!): String
+
+    createBlogCategory(blogCategoryInput: BlogCategoryInput!): BlogCategory
+    updateBlogCategory(
+      _id: String!
+      blogCategoryInput: BlogCategoryInput!
+    ): BlogCategory
+    removeBlogCategory(_id: String!): String
 
     sendContactForm(contactFormData: ContactFormInput!): String
 

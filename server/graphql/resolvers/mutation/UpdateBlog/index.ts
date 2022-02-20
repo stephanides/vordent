@@ -53,6 +53,7 @@ const updateBlog: (root: any, args: any, ctx: any) => Promise<any> = async (
           description: blogData.description,
           slug: blogData.slug,
           content: blogData.content,
+          readingTime: blogData.readingTime,
         },
       },
       { new: true }
