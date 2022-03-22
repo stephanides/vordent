@@ -6,3 +6,4 @@ export * from './media';
 export * from './typography';
 export * from './border';
 export * from './spacing';
+export * from './style';

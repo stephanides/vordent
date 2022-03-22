@@ -14,7 +14,7 @@ export default createGlobalStyle`
   width: 100%;
 }
 
-.custom-bullet-container{
+.custom-bullet-container, custom-bullet-container-services{
   .swiper-pagination-bullet, .swiper-pagination-bullet-active{
     border-radius: 0;
     margin-right: 10px;
@@ -38,5 +38,18 @@ export default createGlobalStyle`
     border-radius: 8px;
   padding:0 16px;
   min-height: 200px;
+}
+.active-nav-link{
+  color: ${colors.primary};
+    font-weight: bold;
+}
+
+.modal-content{
+  border: none;
+  border-radius: 10px;
+  padding: 29px;
+  @media(max-width: 576px){
+    padding: 16px;
+  }
 }
 `;

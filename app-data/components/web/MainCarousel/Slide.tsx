@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import {
   colors,
   Heading2,
+  media,
   Paragraph,
   PrimaryButton,
 } from '../../../shared/design';
@@ -65,15 +66,22 @@ export const Slide = (props: SlideProps) => {
 const Content = styled.div`
   display: flex;
   align-items: center;
-  height: 800px;
   background: white;
+  ${media.down.lg} {
+    flex-direction: column;
+  }
 `;
 
 const TextContent = styled.div`
   width: 40%;
+  min-height: 400px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  ${media.down.lg} {
+    width: 100%;
+  }
 `;
 
 const Title = styled(Heading2)`
@@ -104,4 +112,7 @@ const Label = styled.div`
 
 const Gif = styled.video`
   width: 60%;
+  ${media.down.lg} {
+    width: 100%;
+  }
 `;

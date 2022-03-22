@@ -5,6 +5,7 @@ import {
   UncontrolledDropdown,
 } from 'reactstrap';
 import styled from 'styled-components';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import { colors, media } from '../../design';
 
 export const Wrapper = styled.div``;
@@ -22,6 +23,7 @@ export const MobileNav = styled.div`
   @media (max-width: 992px) {
     display: block;
     z-index: 999;
+    height: 80px;
   }
 `;
 
@@ -69,14 +71,13 @@ export const RightContent = styled.div`
 `;
 
 export const NavButton = styled(Button)`
-  width: 130px;
+  width: 100%;
   height: 40px;
   font-weight: 500;
   font-size: 0.8rem;
   letter-spacing: 1px;
   background-color: ${colors.primary} !important;
   color: ${colors.textInverted};
-  margin-left: 30px;
   border: none;
   &:hover {
     background-color: #f6b03f;
@@ -84,7 +85,7 @@ export const NavButton = styled(Button)`
 `;
 
 export const StyledNavItem = styled.div`
-  z-index: 1;
+  z-index: 2;
   text-align: center;
   a {
     text-decoration: none !important;
@@ -127,6 +128,7 @@ export const MobileNavWrapper = styled.div`
   padding: 20px;
   padding-right: 0;
   position: fixed;
+  top: 0;
   z-index: 999;
   width: 100%;
   background: white;
@@ -138,23 +140,19 @@ type MobileNavContent = {
 
 export const MobileNavContent = styled.div<MobileNavContent>`
   z-index: 999;
-  width: 26rem;
+  width: 100%;
   height: calc(100% - 72px);
   position: fixed;
   overflow-y: visible;
   overflow-x: hidden;
   top: 72px;
   transition: all 0.4s cubic-bezier(0.82, 0.085, 0.395, 0.895);
-  right: ${({ mobileOpen }) => (mobileOpen ? 0 : '-26rem')};
+  right: ${({ mobileOpen }) => (mobileOpen ? 0 : '-100%')};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
-  padding-top: 20px;
-  ${media.down.sm} {
-    width: 20rem;
-    right: ${({ mobileOpen }) => (mobileOpen ? 0 : '-20rem')};
-  }
+  padding-top: 60px;
 `;
 
 export const MobileNavContentIconHolder = styled.div`
@@ -177,7 +175,7 @@ export const MobileNavContentItem = styled.div`
   transition: all 0.3s ease-out;
   font-weight: 500;
   &:hover {
-    background-color: rgba(20, 104, 56, 0.1);
+    background-color: rgba(0, 95, 166, 0.1);
   }
 `;
 
@@ -225,18 +223,11 @@ export const ArrowHolder = styled.div<ArrowType>`
 `;
 
 export const BottomContent = styled.div`
-  width: 100%;
+  width: calc(100% - 80px);
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   margin-top: 2rem;
-  button {
-    margin: 0 auto;
-    margin-bottom: 16px;
-    width: 75%;
-  }
-  ${media.down.sm} {
-    width: 20rem;
-  }
 `;
 
 export const BottomLinks = styled.div`
@@ -249,4 +240,10 @@ export const BottomLinks = styled.div`
     font-size: 0.85rem;
     padding: 12px 0;
   }
+`;
+
+export const Arrow = styled(ExpandLessIcon)`
+  color: ${colors.primary};
+  width: 30px !important;
+  height: 30px !important;
 `;

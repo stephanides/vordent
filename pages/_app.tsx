@@ -22,6 +22,7 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { AppProps } from 'next/app';
 import { SnackbarProvider } from 'notistack';
 import { AuthProvider } from '../app-data/shared/hooks';
+import { OnlyClientProvider } from '../app-data/shared/hooks/useOnlyClient';
 
 function App({ Component, pageProps }: AppProps) {
   React.useEffect(() => {
@@ -47,15 +48,17 @@ function App({ Component, pageProps }: AppProps) {
       <ApolloProvider>
         <AuthProvider>
           <Style />
-          <GoogleReCaptchaProvider reCaptchaKey="">
-            <SnackbarProvider
-              maxSnack={3}
-              anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-              resumeHideDuration={10}
-            >
-              <Component {...pageProps} />
-            </SnackbarProvider>
-          </GoogleReCaptchaProvider>
+          <OnlyClientProvider>
+            <GoogleReCaptchaProvider reCaptchaKey="6LcTMPgeAAAAAEI-16EPbcti6Ex6_nPlybXbn-y7">
+              <SnackbarProvider
+                maxSnack={3}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                resumeHideDuration={10}
+              >
+                <Component {...pageProps} />
+              </SnackbarProvider>
+            </GoogleReCaptchaProvider>
+          </OnlyClientProvider>
         </AuthProvider>
       </ApolloProvider>
     </>

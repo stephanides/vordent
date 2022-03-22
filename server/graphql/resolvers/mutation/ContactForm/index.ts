@@ -10,21 +10,29 @@ function sendContactFormEmail(formData: any): Promise<void> {
       // create reusable transporter object using the default SMTP transport
       let transporter = nodemailer.createTransport({
         host: email.host,
-        port: 587, // 587,
-        secure: false, // true, // ssl
+        port: 465, // 587,
+        secure: true, // true, // ssl
         auth: {
           user: email.user, // generated ethereal user
           pass: email.pass, // generated ethereal password
         },
       });
 
-      // send mail with defined transport object
-      let info = await transporter.sendMail({
-        from: '"Vordent" <info@vordent.sk>',
-        to: 'info@vordent.sk', // list of receivers
-        subject: 'Kontakt zo stránky vordent.sk', // Subject line
-        html: `<p>Meno a priezvisko: ${formData.firstName} ${formData.surname}</p><p>Email: <a href='mailto:${formData.email}'>${formData.email}</a></p><p>Telefón: <a href='tel:${formData.phone}'>${formData.phone}</a></p><p>Správa: <span style="font-weight: bold">${formData.message}</span></p>`, // html body
-      });
+      if (formData.ambulance === 'Richard') {
+        await transporter.sendMail({
+          from: '"Vordent" <objednavky@vordent.sk>',
+          to: 'aesculapdent@gmail.com', // list of receivers
+          subject: 'Objednávka zo stránky vordent.sk', // Subject line
+          html: `<p>Meno a priezvisko: ${formData.firstName} ${formData.surname}</p><p>Email: <a href='mailto:${formData.email}'>${formData.email}</a></p><p>Telefón: <a href='tel:${formData.phone}'>${formData.phone}</a></p><p>Správa: <span style="font-weight: bold">${formData.message}</span></p><p>Služba: <span style="font-weight: bold">${formData.service}</span></p>`, // html body
+        });
+      } else {
+        await transporter.sendMail({
+          from: '"Vordent" <objednavky@vordent.sk>',
+          to: 'info@vordent.sk', // list of receivers
+          subject: 'Objednávka zo stránky vordent.sk', // Subject line
+          html: `<p>Meno a priezvisko: ${formData.firstName} ${formData.surname}</p><p>Email: <a href='mailto:${formData.email}'>${formData.email}</a></p><p>Telefón: <a href='tel:${formData.phone}'>${formData.phone}</a></p><p>Správa: <span style="font-weight: bold">${formData.message}</span></p><p>Služba: <span style="font-weight: bold">${formData.service}</span></p>`, // html body
+        });
+      }
       resolve();
     } catch (err) {
       console.log(err);

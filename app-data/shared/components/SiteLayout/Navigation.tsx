@@ -1,12 +1,20 @@
 import { useRouter } from 'next/router';
 import { Squash as Hamburger } from 'hamburger-react';
 import React, { useState } from 'react';
+import { Collapse } from 'reactstrap';
 import {
+  Arrow,
+  ArrowHolder,
+  BottomContent,
   DesktopNav,
   MobileNav,
   MobileNavContent,
   MobileNavContentIconHolder,
+  MobileNavContentItem,
+  MobileNavLink,
+  MobileNavSubContentItem,
   MobileNavWrapper,
+  NavButton,
   NavWrapper,
   RightContent,
   StyledNav,
@@ -21,14 +29,16 @@ import { CustomContainer } from '../CustomContainer';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [collapse, setCollapse] = useState(false);
+  const [servicesCollapse, setServicesCollapse] = useState(false);
+  const [aboutUsCollapse, setAboutUsCollapse] = useState(false);
   const router = useRouter();
 
   const activeTab = router.pathname;
 
   const toggleMobile = () => setIsOpen(!isOpen);
 
-  const toggleAbout = () => setCollapse(!collapse);
+  const toggleServices = () => setServicesCollapse(!servicesCollapse);
+  const toggleAboutUs = () => setAboutUsCollapse(!aboutUsCollapse);
 
   const isServices = (): boolean =>
     activeTab.includes('zubne-implantaty') ||
@@ -65,11 +75,24 @@ export const Navigation = () => {
                     title="Stomatologická chirurgia"
                     url="/stomatologicka-chirurgia"
                   />
+                  <DropdownItem
+                    title="Záchovná stomatológia"
+                    url="/zachovna-stomatologia"
+                  />
+                  <DropdownItem
+                    title="Dentálna hygiena"
+                    url="/dentalna-hygiena"
+                  />
+                  <DropdownItem title="Bielenie zubov" url="/bielenie-zubov" />
                 </Dropdown>
               </StyledNavItem>
               <StyledNavItem>
                 <Dropdown title="O nás">
-                  <DropdownItem title="O nás" url="/o-nas" />
+                  <DropdownItem title="Náš tím" url="/nas-tim" />
+                  <DropdownItem
+                    title="Vybavenie ambulancií"
+                    url="/vybavenie-ambulancii"
+                  />
                 </Dropdown>
               </StyledNavItem>
               <StyledNavItem>
@@ -126,7 +149,106 @@ export const Navigation = () => {
             />
           </MobileNavContentIconHolder>
 
-          <MobileNavContent mobileOpen={isOpen}></MobileNavContent>
+          <MobileNavContent mobileOpen={isOpen}>
+            <div>
+              <MobileNavLink onClick={toggleServices}>
+                <MobileNavContentItem>
+                  Služby
+                  <ArrowHolder isOpen={servicesCollapse}>
+                    <Arrow />
+                  </ArrowHolder>
+                </MobileNavContentItem>
+              </MobileNavLink>
+              <Collapse isOpen={servicesCollapse}>
+                <Link href="/zubne-implantaty">
+                  <MobileNavLink color="sublink">
+                    <MobileNavSubContentItem className="mt-4">
+                      Zubné implantáty
+                    </MobileNavSubContentItem>
+                  </MobileNavLink>
+                </Link>
+                <Link href="/proteticka-stomatologia">
+                  <MobileNavLink color="sublink">
+                    <MobileNavSubContentItem>
+                      Protetická stomatológia
+                    </MobileNavSubContentItem>
+                  </MobileNavLink>
+                </Link>
+                <Link href="/stomatologicka-chirurgia">
+                  <MobileNavLink color="sublink">
+                    <MobileNavSubContentItem>
+                      Stomatologická chirurgia
+                    </MobileNavSubContentItem>
+                  </MobileNavLink>
+                </Link>
+                <Link href="/zachovna-stomatologia">
+                  <MobileNavLink color="sublink">
+                    <MobileNavSubContentItem>
+                      Záchovná stomatológia
+                    </MobileNavSubContentItem>
+                  </MobileNavLink>
+                </Link>
+                <Link href="/dentalna-hygiena">
+                  <MobileNavLink color="sublink">
+                    <MobileNavSubContentItem>
+                      Dentálna hygiena
+                    </MobileNavSubContentItem>
+                  </MobileNavLink>
+                </Link>
+                <Link href="/bielenie-zubov">
+                  <MobileNavLink color="sublink">
+                    <MobileNavSubContentItem>
+                      Bielenie zubov
+                    </MobileNavSubContentItem>
+                  </MobileNavLink>
+                </Link>
+              </Collapse>
+              <MobileNavLink onClick={toggleAboutUs}>
+                <MobileNavContentItem>
+                  O nás
+                  <ArrowHolder isOpen={aboutUsCollapse}>
+                    <Arrow />
+                  </ArrowHolder>
+                </MobileNavContentItem>
+              </MobileNavLink>
+              <Collapse isOpen={aboutUsCollapse}>
+                <Link href="/nas-tim">
+                  <MobileNavLink color="sublink">
+                    <MobileNavSubContentItem className="mt-4">
+                      Náš tím
+                    </MobileNavSubContentItem>
+                  </MobileNavLink>
+                </Link>
+                <Link href="/vybavenie-ambulancii">
+                  <MobileNavLink color="sublink">
+                    <MobileNavSubContentItem>
+                      Vybavenie ambulancií
+                    </MobileNavSubContentItem>
+                  </MobileNavLink>
+                </Link>
+              </Collapse>
+              <Link href="/cennik">
+                <MobileNavLink>
+                  <MobileNavContentItem>Cenník</MobileNavContentItem>
+                </MobileNavLink>
+              </Link>
+              <Link href="/blog">
+                <MobileNavLink>
+                  <MobileNavContentItem>Blog</MobileNavContentItem>
+                </MobileNavLink>
+              </Link>
+              <Link href="/kontakt">
+                <MobileNavLink>
+                  <MobileNavContentItem>Kontakt</MobileNavContentItem>
+                </MobileNavLink>
+              </Link>
+            </div>
+            <BottomContent>
+              <Link href="/kontakt">
+                <NavButton>Objednať sa</NavButton>
+              </Link>
+            </BottomContent>
+          </MobileNavContent>
         </MobileNavWrapper>
       </MobileNav>
     </>

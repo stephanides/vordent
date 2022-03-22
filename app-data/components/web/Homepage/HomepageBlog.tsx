@@ -9,6 +9,7 @@ import {
   sectionPadding,
   SectionTitle,
   PrimaryButton,
+  ZoomOrnament,
 } from '../../../shared/design';
 import { Blog } from '../../../shared/types';
 
@@ -29,6 +30,9 @@ export const HomepageBlog = () => {
   return (
     <CustomContainer>
       <Wrapper>
+        <SvgHolder>
+          <ZoomOrnament />
+        </SvgHolder>
         <SectionTitle>Blog</SectionTitle>
         <Row>
           {blogsToShow.map((blog: Blog) => (
@@ -46,6 +50,13 @@ export const HomepageBlog = () => {
 const Wrapper = styled.div`
   ${sectionPadding};
   border-top: 2px solid rgba(0, 95, 166, 0.19);
+  position: relative;
+`;
+
+const SvgHolder = styled.div`
+  position: absolute;
+  right: 100px;
+  top: 20px;
 `;
 
 const StyledPrimaryButton = styled(PrimaryButton)`

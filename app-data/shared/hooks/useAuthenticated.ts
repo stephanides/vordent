@@ -8,6 +8,7 @@ export const useAuthenticated = () => {
   const { authenticated } = useAuth();
 
   useEffect(() => {
+    console.log(authenticated);
     if (!authenticated) {
       router.push('/admin/prihlasenie');
       return;

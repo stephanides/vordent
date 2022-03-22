@@ -33,7 +33,7 @@ export const Footer = () => {
                 </SocialLink>
               </SocialHolder>
             </StyledCol>
-            <StyledCol size={12} md={6} xl={3}>
+            <StyledCol xs={5} md={6} xl={3}>
               <SectionTitle>Navigácia</SectionTitle>
               <Section>
                 <NavHolder>
@@ -55,7 +55,7 @@ export const Footer = () => {
                 </NavHolder>
               </Section>
             </StyledCol>
-            <StyledCol size={12} md={6} xl={3}>
+            <StyledCol xs={7} md={6} xl={3}>
               <SectionTitle>Služby</SectionTitle>
               <Section>
                 <NavHolder>
@@ -82,30 +82,26 @@ export const Footer = () => {
             </StyledCol>
             <StyledCol size={12} md={6} xl={3}>
               <SectionTitle>Otváracie hodiny</SectionTitle>
+              <StyledParagraph>
+                <strong>MDDr. Richard Vorobeľ</strong>
+              </StyledParagraph>
               <OpenHours>
-                <Paragraph>
-                  <strong>Pondelok - Štvrtok</strong>
-                </Paragraph>
-                <Paragraph>07:00 - 16:00 hod.</Paragraph>
+                <StyledParagraph>Pondelok - Štvrtok</StyledParagraph>
+                <StyledParagraph>07:00 - 16:00 hod.</StyledParagraph>
               </OpenHours>
               <OpenHours>
-                <Paragraph>
-                  <strong>Piatok</strong>
-                </Paragraph>
-                <Paragraph>07:00 - 12:30 hod.</Paragraph>
+                <StyledParagraph>Piatok</StyledParagraph>
+                <StyledParagraph>07:00 - 12:00 hod.</StyledParagraph>
               </OpenHours>
-              <OpenHours>
-                <Paragraph>
-                  <strong>Sobota</strong>
-                </Paragraph>
-                <Paragraph>chirurgické zákroky</Paragraph>
-              </OpenHours>
-              <OpenHours>
-                <Paragraph>
-                  <strong>Obed</strong>
-                </Paragraph>
-                <Paragraph>12:30 - 13:30 hod.</Paragraph>
-              </OpenHours>
+              <OpenHourseItem>
+                <StyledParagraph>
+                  <strong>MUDr. Martin Vorobeľ</strong>
+                </StyledParagraph>
+                <OpenHours>
+                  <StyledParagraph>Pondelok - Piatok</StyledParagraph>
+                  <StyledParagraph>07:00 - 17:00 hod.</StyledParagraph>
+                </OpenHours>
+              </OpenHourseItem>
             </StyledCol>
           </Row>
         </UpperContent>
@@ -120,13 +116,17 @@ export const Footer = () => {
               <SectionTitle bottom>Zavolajte nám</SectionTitle>
               <Section>
                 <BottomItem>
-                  <Paragraph color="white">MDDR. Richard Vorobeľ</Paragraph>
+                  <StyledParagraph color="white">
+                    MDDR. Richard Vorobeľ
+                  </StyledParagraph>
                   <BottomLink href="tel:+421 948 694 749">
                     +421 948 694 749
                   </BottomLink>
                 </BottomItem>
                 <BottomItem>
-                  <Paragraph color="white">MDDR. Martin Vorobeľ</Paragraph>
+                  <StyledParagraph color="white">
+                    MDDR. Martin Vorobeľ
+                  </StyledParagraph>
                   <BottomLink href="tel:+421 911 143 191">
                     +421 911 143 191
                   </BottomLink>
@@ -142,12 +142,12 @@ export const Footer = () => {
             <StyledCol size={12} md={6} xl={3}>
               <SectionTitle bottom>Naše ambulancie</SectionTitle>
               <BottomItem>
-                <Paragraph color="white">
+                <StyledParagraph color="white">
                   <BottomLink href="">Okružná 3, </BottomLink>Poprad
-                </Paragraph>
-                <Paragraph color="white">
+                </StyledParagraph>
+                <StyledParagraph color="white">
                   <BottomLink href="">Záhradnicka 6, </BottomLink>Poprad
-                </Paragraph>
+                </StyledParagraph>
               </BottomItem>
             </StyledCol>
           </Row>
@@ -209,7 +209,7 @@ export const Footer = () => {
 
 const UpperContent = styled.div`
   padding: 40px 0;
-  border-top: 2px solid rgba(0, 95, 166, 0.19);
+  border-top: 2px solid rgba(214, 223, 229, 0.72);
 `;
 
 const StyledCol = styled(Col)`
@@ -264,7 +264,11 @@ const NavLink = styled.a`
 const SocialLink = styled.a`
   margin-right: 8px;
 `;
-const SocialHolder = styled.div``;
+const SocialHolder = styled.div`
+  ${media.down.sm} {
+    margin-bottom: 16px;
+  }
+`;
 
 const OpenHours = styled.div`
   display: flex;
@@ -308,13 +312,11 @@ const BottomLink = styled.a`
   }
 `;
 
-const CreatedByInner = styled.div`
-  background-color: ${colors.primary};
-`;
-
 const CreatedBy = styled.div`
   background-color: ${colors.primary};
   color: ${colors.textInverted};
+  top: -1px;
+  position: relative;
 `;
 
 const CreatedByWrapper = styled.div`
@@ -324,10 +326,13 @@ const CreatedByWrapper = styled.div`
   align-items: center;
   border-top: 1px solid white;
   ${media.down.lg} {
-    flex-direction: column;
   }
   ${media.down.md} {
-    padding: 16px 24px;
+    padding: 16px 0px;
+  }
+  ${media.down.sm} {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -336,6 +341,9 @@ const CreatedByContentMain = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  ${media.down.sm} {
+    align-items: center;
+  }
 `;
 
 const CreatedByContent = styled.div`
@@ -365,4 +373,19 @@ const CreatedByItem = styled.p`
 
 const KraveLogo = styled.img`
   width: 80px;
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0 0 4px 0;
+  strong {
+    font-weight: 500;
+  }
+`;
+
+const OpenHourseItem = styled.div`
+  border-top: 1px solid #dee4e8;
+  margin-top: 20px;
+  padding-top: 20px;
 `;

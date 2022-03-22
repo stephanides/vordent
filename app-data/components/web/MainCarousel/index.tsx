@@ -26,24 +26,8 @@ export const MainCarousel = () => {
             do eiusmod tempor"
               url="/cennik"
               buttonTitle="Cenník"
-              imageUrl="/gifs/richard.webm"
+              imageUrl="/gifs/homepage_carousel_1.webm"
               key="slide-1"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            {' '}
-            <Slide
-              activeSlide={activeSlide}
-              labelStrong="10+ rokov"
-              labelNormal="skúsenosti"
-              title="druhy slide"
-              subTitle="klinika z Popradu"
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-            do eiusmod tempor"
-              url="/cennik"
-              buttonTitle="Cenník"
-              imageUrl="/gifs/sestricka.webm"
-              key="slide-2"
             />
           </SwiperSlide>
         </SwiperCarousel>

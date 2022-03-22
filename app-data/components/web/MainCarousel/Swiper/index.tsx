@@ -23,8 +23,6 @@ export const SwiperCarousel = (props: SwiperCarouselProps) => {
   return (
     <>
       <Swiper
-        observer
-        effect="fade"
         tag={SwiperWrapper}
         slidesPerView={1}
         spaceBetween={30}
@@ -38,20 +36,20 @@ export const SwiperCarousel = (props: SwiperCarouselProps) => {
         loop
         autoplay={{ delay: 10000 }}
         navigation={{
-          prevEl: '.swiper-button-prev',
-          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev-main',
+          nextEl: '.swiper-button-next-main',
         }}
       >
         {props.children}
       </Swiper>
       <BulletContainer>
         <div>
-          0{props.activeSlide + 1} / 02
+          0{props.activeSlide + 1} / 01
           <BulletHolder className="custom-bullet-container"></BulletHolder>
         </div>
         <ArrowHolder>
-          <SwiperArrowLeft className="swiper-button-prev" />
-          <SwiperArrowRight className="swiper-button-next" />
+          <SwiperArrowLeft className="swiper-button-prev swiper-button-prev-main" />
+          <SwiperArrowRight className="swiper-button-next swiper-button-next-main" />
         </ArrowHolder>
       </BulletContainer>
     </>

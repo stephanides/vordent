@@ -14,7 +14,11 @@ export const BlogThumbnail = (props: BlogThumbnailProps) => {
   const { image, readingTime, title, description, slug, category } = props.blog;
   return (
     <StyledCol size={12} lg={4} md={6} data-aos="fade-up" data-aos-once="true">
-      <Image url={image.path} />
+      <ImageWrapper>
+        <Link href={`blog/${slug}`}>
+          <Image url={image.path} />
+        </Link>
+      </ImageWrapper>
       <Content>
         <ReadingTime>
           <BlogCategory categoryId={category} />{' '}
@@ -37,7 +41,9 @@ export const BlogThumbnail = (props: BlogThumbnailProps) => {
   );
 };
 
-const StyledCol = styled(Col)``;
+const StyledCol = styled(Col)`
+  margin-bottom: 32px;
+`;
 
 type ImageProps = {
   url: string;
@@ -45,12 +51,22 @@ type ImageProps = {
 const Image = styled.div<ImageProps>`
   width: 100%;
   height: 277px;
-  margin-bottom: 22px;
-  border-radius: 10px;
+  transition: all 0.3s ease-out;
   background-image: url(${({ url }) => (url ? url : '')});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+const ImageWrapper = styled.div`
+  overflow: hidden;
+  border-radius: 10px;
+  height: 277px;
+  margin-bottom: 22px;
 `;
 
 const Content = styled.div``;

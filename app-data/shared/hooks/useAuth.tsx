@@ -99,6 +99,7 @@ export function useAuth(): {
   function handleSignOut(): void {
     Cookies.remove('token');
     Cookies.remove('userId');
+    console.log('signout');
     toggleAuthenticated(false);
   }
 

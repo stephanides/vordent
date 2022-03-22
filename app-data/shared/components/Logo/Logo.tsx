@@ -1,5 +1,6 @@
 import React, { ForwardedRef, ReactNode } from 'react';
 import styled from 'styled-components';
+import { media } from '../../design';
 
 type LogoSVGProps = {
   children?: ReactNode;
@@ -204,4 +205,10 @@ const LogoSvg = React.forwardRef(
 export const Logo = styled(LogoSvg)`
   top: -35px;
   cursor: pointer;
+  z-index: 9999;
+  svg {
+    ${media.down.lg} {
+      width: 120px;
+    }
+  }
 `;

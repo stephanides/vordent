@@ -6,4 +6,5 @@ export const colors = {
   text: '#43515A',
   textInverted: '#FFFFFF',
   black: '#000000',
+  green: '#75BD97',
 };

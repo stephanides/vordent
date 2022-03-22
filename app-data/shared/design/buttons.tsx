@@ -25,6 +25,9 @@ export const PrimaryButton = styled(Button)<ButtonProps>`
   &:active {
     background-color: ${colors.primaryHover} !important;
   }
+  &:disabled {
+    background-color: #8dd2ff;
+  }
 `;
 
 export const PrimaryLink = styled.a<ButtonProps>`
