@@ -55,6 +55,11 @@ const App: () => Promise<void> = async () => {
     await db();
 
     app.all('*', (req, res) => handle(req, res));
+    app.get('/static/*', (req, res) => {
+      // Disallow travelling up in the file tree
+      let target = req.originalUrl.replace('..', '');
+      return res.sendFile(__dirname + '/static' + target);
+    });
     //await setup();
 
     console.log(`🚀 Server ready at ${server.graphqlPath}`);

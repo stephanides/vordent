@@ -97,13 +97,20 @@ const NormalTitle = styled.h1`
 `;
 
 const ContentText = styled.div`
-  max-width: 800px;
+  max-width: 1120px;
+  width: 100%;
   margin: 0 auto;
+  img{
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+  }
   * {
     strong {
     }
     ins{
     }
+    
 `;
 
 const Description = styled(Paragraph)`

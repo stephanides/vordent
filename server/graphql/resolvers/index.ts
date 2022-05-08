@@ -20,6 +20,9 @@ import { sendContactForm } from './mutation/ContactForm';
 
 import validateUser from './mutation/ValidateUser';
 import blogCategories from './query/BlogCategories';
+import galleryItems from './query/GalleryItems';
+import createGalleryItem from './mutation/CreateGalleryItem';
+import removeGalleryItem from './mutation/RemoveGalleryItem';
 
 const resolvers = {
   Query: {
@@ -29,6 +32,7 @@ const resolvers = {
     blogBySlug: async (root: any, args: any, ctx: any) =>
       blogBySlug(root, args, ctx),
     blogCategories: async () => blogCategories(),
+    galleryItems: async () => galleryItems(),
   },
   Mutation: {
     loginUser: async (root: any, args: any, ctx: any) =>
@@ -53,6 +57,10 @@ const resolvers = {
       updateBlogCategory(root, args, ctx),
     removeBlogCategory: async (root: any, args: any, ctx: any) =>
       removeBlogCategory(root, args, ctx),
+    createGalleryItem: async (root: any, args: any, ctx: any) =>
+      createGalleryItem(root, args, ctx),
+    removeGalleryItem: async (root: any, args: any, ctx: any) =>
+      removeGalleryItem(root, args, ctx),
   },
 };
 

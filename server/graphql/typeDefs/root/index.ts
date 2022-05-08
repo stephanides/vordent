@@ -14,6 +14,7 @@ const rootTypeDefs = gql`
     blog(id: String!): Blog
     blogBySlug(slug: String!): BlogWithCategory
     blogs(categoryId: String): [Blog]
+    galleryItems: [GalleryItem]
   }
 
   type Mutation {
@@ -35,6 +36,9 @@ const rootTypeDefs = gql`
     sendContactForm(contactFormData: ContactFormInput!): String
 
     validateUser(token: String!): Boolean
+
+    createGalleryItem(galleryItemInput: GalleryItemInput): GalleryItem
+    removeGalleryItem(_id: String!): String
   }
 
   schema {

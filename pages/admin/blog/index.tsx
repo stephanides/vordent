@@ -17,7 +17,7 @@ const BlogsPage: FC<AdminPagePros> = () => {
         <title>Vordent - Administrácia</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>{' '}
-      <AdminLayout title="Recepty">
+      <AdminLayout title="Blogy">
         <Blogs />
       </AdminLayout>
     </>

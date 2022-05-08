@@ -6,7 +6,16 @@ import draftToHtml from 'draftjs-to-html';
 import dynamic from 'next/dynamic';
 import { SnackbarKey, useSnackbar } from 'notistack';
 import React, { useState } from 'react';
-import { Container, Form, Row, Col } from 'reactstrap';
+import {
+  Container,
+  Form,
+  Row,
+  Col,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+} from 'reactstrap';
 import slugify from 'slugify';
 import styled from 'styled-components';
 import { CREATE_BLOG_MUTATION } from '../../../../graphql/mutation';
@@ -23,6 +32,7 @@ import {
 import { bytesToSize } from '../../../../shared/helpers/formatters';
 import toBase64 from '../../../../shared/helpers/toBase64';
 import { InputBlog } from '../../../../shared/types';
+import { GalleryItems } from '../../Gallery/GalleryItems';
 import CategorySelector from './CategorySelector';
 
 const Wrapper = styled.div`
@@ -32,6 +42,26 @@ const Wrapper = styled.div`
   background: white;
   ${borderBoxShadow};
   ${borderRadius};
+`;
+
+const ImageOptionHolder = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+`;
+
+const ButtonHolder = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100;
+  border-top: 1px solid #dee4e8;
+  margin-top: 24px;
+  padding: 40px 0 0px 0;
+`;
+
+const StyledPrimaryButton = styled(PrimaryButton)`
+  padding: 6px 24px;
 `;
 
 const Editor = dynamic(
@@ -46,6 +76,7 @@ export const BlogForm = () => {
     refetchQueries: [{ query: BLOGS_QUERY }],
   });
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [modal, setModal] = useState(false);
   const [blogFormData, setBlogFormData] = useState<InputBlog>({
     title: '',
     category: '',
@@ -55,6 +86,8 @@ export const BlogForm = () => {
     content: '',
     readingTime: null,
   });
+
+  const toggle = () => setModal(!modal);
 
   const onEditorStateChange = (state: EditorState) => {
     let content = draftToHtml(convertToRaw(state.getCurrentContent()));
@@ -178,7 +211,12 @@ export const BlogForm = () => {
               />
             </Col>
             <Col size={12} xs={12}>
-              <Heading6 className="mt-4">Obsah blogu</Heading6>
+              <ImageOptionHolder>
+                <Heading6 className="mt-4">Obsah blogu</Heading6>
+                <StyledPrimaryButton onClick={toggle} size="small">
+                  Galéria
+                </StyledPrimaryButton>
+              </ImageOptionHolder>
               <Editor
                 editorState={editorState}
                 wrapperClassName="description-wrapper"
@@ -223,6 +261,14 @@ export const BlogForm = () => {
           </Row>
         </Container>
       </Form>
+      <Modal isOpen={modal} toggle={toggle} size="xl">
+        <ModalBody>
+          <GalleryItems count={4} />
+          <ButtonHolder>
+            <PrimaryButton onClick={toggle}>Zatvoriť</PrimaryButton>
+          </ButtonHolder>
+        </ModalBody>
+      </Modal>
     </Wrapper>
   );
 };

@@ -119,3 +119,21 @@ export const REMOVE_BLOG_MUTATION = gql`
     removeBlog(_id: $_id)
   }
 `;
+
+export const CREATE_GALLERY_ITEM_MUTATION = gql`
+  mutation createGalleryItem($galleryItemInput: GalleryItemInput!) {
+    createGalleryItem(galleryItemInput: $galleryItemInput) {
+      _id
+      image {
+        path
+        title
+      }
+    }
+  }
+`;
+
+export const REMOVE_GALLERY_ITEM_MUTATION = gql`
+  mutation removeGalleryItem($_id: String!) {
+    removeGalleryItem(_id: $_id)
+  }
+`;

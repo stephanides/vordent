@@ -13,7 +13,7 @@ import { setContext } from '@apollo/client/link/context';
 import { ReactNode } from 'react';
 
 const domain: string =
-  process.env.NODE_ENV === 'production' ? 'vordent.sk' : 'localhost'; // change this to domain
+  process.env.NODE_ENV === 'production' ? 'test.vordent.sk' : 'localhost'; // change this to domain
 const protocol: string =
   process.env.NODE_ENV === 'production' ? 'https' : 'http'; // change this to https
 const port = Number(process.env.PORT) || 3199;

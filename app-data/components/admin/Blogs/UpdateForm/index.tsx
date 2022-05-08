@@ -67,6 +67,7 @@ export const BlogUpdateForm: FC<BlogUpdateFormProps> = (props) => {
     content: updateBlogData.content || '',
     category: updateBlogData.category || '',
     description: updateBlogData.description || '',
+    readingTime: updateBlogData.readingTime || null,
   });
 
   console.log(blogFormData);
@@ -173,6 +174,23 @@ export const BlogUpdateForm: FC<BlogUpdateFormProps> = (props) => {
               <CategorySelector
                 blogData={blogFormData}
                 setBlogData={setBlogFormData}
+              />
+            </Col>
+            <Col size={12} md={6}>
+              <StyledTextField
+                className={classes.button}
+                variant="outlined"
+                placeholder="Čas čítania"
+                fullWidth
+                type="number"
+                required
+                value={blogFormData.readingTime}
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                  setBlogFormData({
+                    ...blogFormData,
+                    readingTime: Number(event.currentTarget.value),
+                  });
+                }}
               />
             </Col>
             <Col size={12} xs={12}>

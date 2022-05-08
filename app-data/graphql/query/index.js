@@ -86,3 +86,15 @@ export const BLOG_BY_SLUG_QUERY = gql`
     }
   }
 `;
+
+export const GALLERY_ITEMS_QUERY = gql`
+  query galleryItems {
+    galleryItems {
+      _id
+      image {
+        path
+        title
+      }
+    }
+  }
+`;

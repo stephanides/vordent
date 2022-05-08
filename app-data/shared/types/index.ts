@@ -94,3 +94,15 @@ export type PriceListItem = {
   price: string;
   insurancePrice?: string;
 };
+
+export type GalleryItem = {
+  _id: string;
+  image: {
+    path: string;
+    ext: string;
+    size: string;
+    title: string;
+  };
+};
+
+export type GalleryItems = GalleryItem[];

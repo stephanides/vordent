@@ -43,11 +43,4 @@ export const services: Services = [
       'Elegantné, šetrné a kvalitné riešenie straty jedného alebo viacerých zubov. Implantáty predstavujú umelú náhradu zubných koreňov…',
     url: '',
   },
-  {
-    icon: '/icons/services/zubne_implantaty.svg',
-    title: 'Zubné Implantáty',
-    description:
-      'Elegantné, šetrné a kvalitné riešenie straty jedného alebo viacerých zubov. Implantáty predstavujú umelú náhradu zubných koreňov…',
-    url: '',
-  },
 ];

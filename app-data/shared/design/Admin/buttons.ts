@@ -19,13 +19,13 @@ export const StyledAdminButton = styled(Button)`
 
 export const StyledAdminSecondaryButton = styled(Button)`
   padding: 8px 24px;
-  background-color: ${colors.lightGrey} !important;
+  background-color: ${colors.text} !important;
   color: ${colors.text} !important;
   transition: background-color 0.3s ease-out;
   border: none;
   box-shadow: none !important;
   &:hover {
-    background-color: ${colors.grey} !important;
+    background-color: ${colors.text} !important;
   }
   &:disabled {
     opacity: 0.6;

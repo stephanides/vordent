@@ -5,7 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 // Icons
 import GroupOutlinedIcon from '@material-ui/icons/GroupOutlined';
-import AirplayIcon from '@material-ui/icons/Airplay';
+import InsertPhotoIcon from '@material-ui/icons/InsertPhoto';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import styled from 'styled-components';
 import { Logo } from '../Logo';
@@ -62,6 +62,11 @@ const menuItems1 = [
     href: '/admin/blog',
     title: 'Blog',
     iconComponent: MenuBookIcon,
+  },
+  {
+    href: '/admin/galeria',
+    title: 'Galéria',
+    iconComponent: InsertPhotoIcon,
   },
 ];
 

@@ -16,12 +16,7 @@ const AccordionRow = (props: PriceListItem) => {
     <AcordionRowWrapper>
       <PriceTitle>{props.title}</PriceTitle>
       <PriceContent>
-        <PriceItem>-</PriceItem>
-        {props.insurancePrice ? (
-          <PriceItem>-</PriceItem>
-        ) : (
-          <PriceItem>-</PriceItem>
-        )}
+        <PriceItem>{props.price} €</PriceItem>
       </PriceContent>
     </AcordionRowWrapper>
   );
@@ -68,10 +63,7 @@ export const PriceList = () => {
                       <PriceTitle>&nbsp;</PriceTitle>
                       <PriceContent>
                         <PriceItem>
-                          <strong>Samoplatca</strong>
-                        </PriceItem>
-                        <PriceItem>
-                          <strong>S PP</strong>
+                          <strong>Cena</strong>
                         </PriceItem>
                       </PriceContent>
                     </AccordionHeading>
@@ -134,7 +126,7 @@ const PriceContent = styled.div`
 `;
 
 const PriceItem = styled(Paragraph)`
-  width: 120px;
+  width: 160px;
   font-size: 0.875rem;
   font-weight: 300;
   margin: 0;
@@ -142,10 +134,10 @@ const PriceItem = styled(Paragraph)`
     font-weight: 500;
   }
   ${media.down.md} {
-    width: 80px;
+    width: 120px;
   }
   ${media.down.sm} {
-    width: 64px;
+    width: 80px;
     font-size: 0.7rem;
   }
 `;
