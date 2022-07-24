@@ -22,11 +22,10 @@ export const MainCarousel = () => {
               labelNormal="skúsenosti"
               title="Moderná zubná"
               subTitle="klinika z Popradu"
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-            do eiusmod tempor"
+              description="Nadštandardné komplexné stomatologické ošetrenie všetkých vekových skupín."
               url="/cennik"
               buttonTitle="Cenník"
-              imageUrl="/gifs/homepage_carousel_1.webm"
+              imageUrl="/gifs/homepage_carousel_1.gif"
               key="slide-1"
             />
           </SwiperSlide>

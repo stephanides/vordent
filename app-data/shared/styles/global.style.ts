@@ -52,4 +52,7 @@ export default createGlobalStyle`
     padding: 16px;
   }
 }
+.grecaptcha-badge{
+  display: none;
+}
 `;

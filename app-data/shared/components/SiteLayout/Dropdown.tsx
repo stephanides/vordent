@@ -64,6 +64,7 @@ const Items = styled.div`
   position: absolute;
   width: 247px;
   background-color: ${colors.primary};
+  border: 1px solid white;
   border-radius: 10px;
   top: 40px;
   transform: translateX(calc(-50% + 53px));

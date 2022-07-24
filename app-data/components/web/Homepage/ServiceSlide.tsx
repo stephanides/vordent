@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 import { colors, Heading6, Paragraph, media } from '../../../shared/design';
+import { ArrowRight } from '../../../shared/design/icons/ArrowRight';
 import { Service } from '../../../shared/types';
 
 export const ServiceSlide = (props: Service) => {
@@ -11,6 +13,12 @@ export const ServiceSlide = (props: Service) => {
         <Title>{title}</Title>
       </Header>
       <Description>{description}</Description>
+      <Link href={url}>
+        <ReadMore>
+          Zistiť viac
+          <ArrowRight />
+        </ReadMore>
+      </Link>
     </Wrapper>
   );
 };
@@ -21,6 +29,9 @@ const Wrapper = styled.div`
   border-radius: 10px;
   padding: 42px 24px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Header = styled.div`
@@ -63,4 +74,23 @@ const Description = styled(Paragraph)`
   margin-top: 24px;
   text-align: left;
   user-select: none;
+`;
+
+const ReadMore = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${colors.primary};
+  font-size: 0.875rem;
+  font-weight: 400;
+  cursor: pointer;
+  svg {
+    margin-left: 12px;
+    transition: all 0.3s ease-out;
+    position: relative;
+  }
+  &:hover {
+    svg {
+      transform: translateX(8px);
+    }
+  }
 `;

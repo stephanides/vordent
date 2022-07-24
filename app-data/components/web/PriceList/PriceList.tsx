@@ -1,7 +1,6 @@
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { CustomContainer, PageHeader } from '../../../shared/components';
 import { pricelistData } from './pricelistData';
@@ -28,7 +27,7 @@ export const PriceList = () => {
       <PageHeader
         pretitle="Platný od 1. 1. 2022"
         title="Cenník"
-        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’"
+        description="Kompletný cenník je kedykoľvek k dispozícii na recepcií nášej kliniky. Tešíme sa na Vašu návštevu!"
       />
       <AccordionWrapper>
         {pricelistData.map((price) => (

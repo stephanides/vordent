@@ -10,6 +10,7 @@ import SwiperCore, {
 import { CustomContainer } from '../../../../shared/components';
 import { SwiperArrowRight } from './SwiperArrowRight';
 import { SwiperArrowLeft } from './SwiperArrowLeft';
+import { colors, media } from '../../../../shared/design';
 
 SwiperCore.use([Autoplay, Navigation, Pagination, EffectFade]);
 
@@ -43,10 +44,13 @@ export const SwiperCarousel = (props: SwiperCarouselProps) => {
         {props.children}
       </Swiper>
       <BulletContainer>
-        <div>
-          0{props.activeSlide + 1} / 01
+        <InfoWrapper>
+          <div>
+            <ActiveSlideNumber>0{props.activeSlide + 1}</ActiveSlideNumber>{' '}
+            <AllSlides>/ 01</AllSlides>
+          </div>
           <BulletHolder className="custom-bullet-container"></BulletHolder>
-        </div>
+        </InfoWrapper>
         <ArrowHolder>
           <SwiperArrowLeft className="swiper-button-prev swiper-button-prev-main" />
           <SwiperArrowRight className="swiper-button-next swiper-button-next-main" />
@@ -55,6 +59,15 @@ export const SwiperCarousel = (props: SwiperCarouselProps) => {
     </>
   );
 };
+
+const InfoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  ${media.down.sm} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
 
 const BulletContainer = styled(CustomContainer)`
   position: absolute;
@@ -65,9 +78,24 @@ const BulletContainer = styled(CustomContainer)`
   padding: 0;
 `;
 
+const ActiveSlideNumber = styled.span`
+  font-size: 18px;
+  color: ${colors.primary};
+`;
+
+const AllSlides = styled.span`
+  font-size: 12px;
+  font-weight: 300;
+  color: #d9e7f2;
+`;
+
 const BulletHolder = styled.div`
   position: relative;
   z-index: 2;
+  margin-left: 16px;
+  ${media.down.sm} {
+    margin-left: 0px;
+  }
 `;
 
 const ArrowHolder = styled.div`

@@ -40,6 +40,11 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
             rel="stylesheet"
           />
+          <script
+            id="cookieyes"
+            type="text/javascript"
+            src="https://cdn-cookieyes.com/client_data/60740093020de7fe6cb65261/script.js"
+          />
         </Head>
         <body>
           <Main />

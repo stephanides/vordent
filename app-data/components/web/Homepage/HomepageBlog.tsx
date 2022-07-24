@@ -10,6 +10,7 @@ import {
   SectionTitle,
   PrimaryButton,
   ZoomOrnament,
+  media,
 } from '../../../shared/design';
 import { Blog } from '../../../shared/types';
 
@@ -57,6 +58,9 @@ const SvgHolder = styled.div`
   position: absolute;
   right: 100px;
   top: 20px;
+  ${media.down.sm} {
+    right: 0px;
+  }
 `;
 
 const StyledPrimaryButton = styled(PrimaryButton)`

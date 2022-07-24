@@ -1,13 +1,20 @@
+import Link from 'next/link';
 import { useState } from 'react';
 import { Row, Col } from 'reactstrap';
 import styled from 'styled-components';
 import { CustomContainer } from '../../../shared/components';
-import { colors, Heading5, media, Paragraph } from '../../../shared/design';
+import {
+  colors,
+  Heading5,
+  media,
+  Paragraph,
+  PrimaryButton,
+} from '../../../shared/design';
 
 const images = [
-  '/images/basic-info/girl.png',
-  '/images/basic-info/girl.png',
-  '/images/basic-info/girl.png',
+  '/images/basic-info/1.png',
+  '/images/basic-info/2.png',
+  '/images/basic-info/3.png',
 ];
 
 export const BasicInfo = () => {
@@ -25,13 +32,13 @@ export const BasicInfo = () => {
                 active={activeTab === 0}
                 onClick={() => setActiveTab(0)}
               >
-                Ošetrenie detí
+                Podpora HK Poprad
               </GroupButton>
               <GroupButton
                 active={activeTab === 1}
                 onClick={() => setActiveTab(1)}
               >
-                Poisťovne
+                Špičkové vybavenie
               </GroupButton>
               <GroupButton
                 active={activeTab === 2}
@@ -43,13 +50,46 @@ export const BasicInfo = () => {
             {activeTab === 0 && (
               <>
                 <ContentTitle>
-                  Robíme všetko aj pre našich najmenších pacientov
+                  Podcenenie ochrany zubov môže stáť hokejistov veľa
                 </ContentTitle>
                 <ContentText>
-                  “Dieťa by sa prvýkrát do zubnej ambulancie malo prísť len
-                  zoznámiť s lekárom a ordináciou. Prísť vtedy, keď už pociťuje
-                  bolesť, je neskoro.”
+                  “V našej ambulancii máme pacientov všetkých vekových
+                  kategórií. Medzi našich pacientov patrí aj celý hokejový tím
+                  HK Poprad.”
                 </ContentText>
+                <PersonInfo>
+                  <PhotoMini src="/images/basic-info/riso.png" />
+                  <strong>MDDr. Richard Vorobeľ, </strong> Chirurg-implantológ
+                </PersonInfo>
+                <Link href="/sluzby/proteticka-stomatologia">
+                  <StyledPrimaryButton>Čítať viac</StyledPrimaryButton>
+                </Link>
+              </>
+            )}
+            {activeTab === 1 && (
+              <>
+                <ContentTitle>Vybavenie naších ambulancií</ContentTitle>
+                <ContentText>
+                  Pre zlepšenie diagnostických možností a pre zvýšenie kvality
+                  poskytnutých stomatologických služieb je naša klinika vybavená
+                  prístrojmi a materiálmi najvyššej kvality.
+                </ContentText>
+                <Link href="/vybavenie-ambulancii">
+                  <StyledPrimaryButton>Čítať viac</StyledPrimaryButton>
+                </Link>
+              </>
+            )}
+            {activeTab === 2 && (
+              <>
+                <ContentTitle>Mladý dynamický kolektív</ContentTitle>
+                <ContentText>
+                  Odborne pomáhame našim pacientom a usiluje sa maximálne
+                  vyhovieť Vašim požiadavkám a odbúrať aj nepríjemný pocit z
+                  návštevy u zubára.
+                </ContentText>
+                <Link href="/nas-tim">
+                  <StyledPrimaryButton>Čítať viac</StyledPrimaryButton>
+                </Link>
               </>
             )}
           </Content>
@@ -82,6 +122,11 @@ const TabsPicker = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
+`;
+
+const StyledPrimaryButton = styled(PrimaryButton)`
+  width: 186px;
+  margin-top: 16px;
 `;
 
 type GroupButtonProps = {
@@ -138,4 +183,22 @@ const ContentTitle = styled(Heading5)`
 
 const ContentText = styled(Paragraph)`
   color: ${colors.text};
+`;
+
+const PersonInfo = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${colors.text};
+  margin-bottom: 16px;
+  margin-top: 32px;
+  strong: {
+    font-weight: 500;
+  }
+`;
+
+const PhotoMini = styled.img`
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin-right: 16px;
 `;

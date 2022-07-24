@@ -1,1 +1,1 @@
-export const baseUrl = 'https://test.vordent.sk';
+export const baseUrl = 'https://vordent.sk';

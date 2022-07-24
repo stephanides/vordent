@@ -29,7 +29,6 @@ const Wrapper = styled.div`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgba(0, 95, 166, 0.15);
   position: relative;
   margin-top: 0;
   margin-left: 16px;

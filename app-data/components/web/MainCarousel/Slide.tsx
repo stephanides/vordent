@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import {
@@ -33,15 +33,12 @@ export const Slide = (props: SlideProps) => {
     imageUrl,
     buttonTitle,
   } = props;
-  const videoRef = useRef<HTMLVideoElement>();
-
+  const [gif, setGif] = useState('');
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load();
-      setTimeout(function () {
-        videoRef.current.play();
-      }, 0);
-    }
+    setTimeout(() => {
+      setGif('');
+      setGif(imageUrl);
+    }, 0);
   }, [props.activeSlide]);
   return (
     <Content>
@@ -53,12 +50,10 @@ export const Slide = (props: SlideProps) => {
         <SubTitle>{subTitle}</SubTitle>
         <Description>{description}</Description>
         <Link href={url}>
-          <PrimaryButton>{buttonTitle}</PrimaryButton>
+          <StyledPrimaryButton>{buttonTitle}</StyledPrimaryButton>
         </Link>
       </TextContent>
-      <Gif muted ref={videoRef}>
-        <source src={imageUrl} type="video/webm" />
-      </Gif>
+      <Gif src={gif} />
     </Content>
   );
 };
@@ -110,7 +105,11 @@ const Label = styled.div`
   padding: 11px 13px;
 `;
 
-const Gif = styled.video`
+const StyledPrimaryButton = styled(PrimaryButton)`
+  width: 200px;
+`;
+
+const Gif = styled.img`
   width: 60%;
   ${media.down.lg} {
     width: 100%;

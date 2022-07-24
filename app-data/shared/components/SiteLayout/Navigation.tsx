@@ -65,25 +65,28 @@ export const Navigation = () => {
                 <Dropdown title="Služby">
                   <DropdownItem
                     title="Zubné implantáty"
-                    url="/zubne-implantaty"
+                    url="/sluzby/zubne-implantaty"
                   />
                   <DropdownItem
                     title="Protetická stomatológia"
-                    url="/proteticka-stomatologia"
+                    url="/sluzby/proteticka-stomatologia"
                   />
                   <DropdownItem
                     title="Stomatologická chirurgia"
-                    url="/stomatologicka-chirurgia"
+                    url="/sluzby/stomatologicka-chirurgia"
                   />
                   <DropdownItem
                     title="Záchovná stomatológia"
-                    url="/zachovna-stomatologia"
+                    url="/sluzby/zachovna-stomatologia"
                   />
                   <DropdownItem
                     title="Dentálna hygiena"
-                    url="/dentalna-hygiena"
+                    url="/sluzby/dentalna-hygiena"
                   />
-                  <DropdownItem title="Bielenie zubov" url="/bielenie-zubov" />
+                  <DropdownItem
+                    title="Bielenie zubov"
+                    url="/sluzby/bielenie-zubov"
+                  />
                 </Dropdown>
               </StyledNavItem>
               <StyledNavItem>
@@ -138,7 +141,9 @@ export const Navigation = () => {
       <MobileNav>
         <MobileNavWrapper>
           <Link href="/">
-            <Logo />
+            <div>
+              <Logo />
+            </div>
           </Link>
           <MobileNavContentIconHolder>
             <Hamburger
@@ -160,42 +165,42 @@ export const Navigation = () => {
                 </MobileNavContentItem>
               </MobileNavLink>
               <Collapse isOpen={servicesCollapse}>
-                <Link href="/zubne-implantaty">
+                <Link href="/sluzby/zubne-implantaty">
                   <MobileNavLink color="sublink">
                     <MobileNavSubContentItem className="mt-4">
                       Zubné implantáty
                     </MobileNavSubContentItem>
                   </MobileNavLink>
                 </Link>
-                <Link href="/proteticka-stomatologia">
+                <Link href="/sluzby/proteticka-stomatologia">
                   <MobileNavLink color="sublink">
                     <MobileNavSubContentItem>
                       Protetická stomatológia
                     </MobileNavSubContentItem>
                   </MobileNavLink>
                 </Link>
-                <Link href="/stomatologicka-chirurgia">
+                <Link href="/sluzby/stomatologicka-chirurgia">
                   <MobileNavLink color="sublink">
                     <MobileNavSubContentItem>
                       Stomatologická chirurgia
                     </MobileNavSubContentItem>
                   </MobileNavLink>
                 </Link>
-                <Link href="/zachovna-stomatologia">
+                <Link href="/sluzby/zachovna-stomatologia">
                   <MobileNavLink color="sublink">
                     <MobileNavSubContentItem>
                       Záchovná stomatológia
                     </MobileNavSubContentItem>
                   </MobileNavLink>
                 </Link>
-                <Link href="/dentalna-hygiena">
+                <Link href="/sluzby/dentalna-hygiena">
                   <MobileNavLink color="sublink">
                     <MobileNavSubContentItem>
                       Dentálna hygiena
                     </MobileNavSubContentItem>
                   </MobileNavLink>
                 </Link>
-                <Link href="/bielenie-zubov">
+                <Link href="/sluzby/bielenie-zubov">
                   <MobileNavLink color="sublink">
                     <MobileNavSubContentItem>
                       Bielenie zubov

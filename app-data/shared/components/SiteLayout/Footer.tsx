@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import CookieConsent, { Cookies } from 'react-cookie-consent';
+import ReactGA from 'react-ga4';
 import styled from 'styled-components';
 import AOS from 'aos';
 import { colors, media, Paragraph } from '../../design';
@@ -13,8 +14,8 @@ export const Footer = () => {
     AOS.init({
       duration: 1000,
     });
-    //ReactGA.initialize('UA-179261257-1');
-    //ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.initialize('G-H1ZCNF79HH');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   });
 
   return (
@@ -125,7 +126,7 @@ export const Footer = () => {
                 </BottomItem>
                 <BottomItem>
                   <StyledParagraph color="white">
-                    MDDR. Martin Vorobeľ
+                    MUDR. Martin Vorobeľ
                   </StyledParagraph>
                   <BottomLink href="tel:+421 911 143 191">
                     +421 911 143 191
@@ -173,36 +174,6 @@ export const Footer = () => {
           </CreatedByWrapper>
         </CustomContainer>
       </CreatedBy>
-      <CookieConsent
-        location="bottom"
-        buttonText="Prijať"
-        cookieName="Vordent cookie"
-        onAccept={() => {
-          Cookies.set('CookiesAccepted', 'true');
-        }}
-        style={{
-          background: '#FFF',
-          color: '#222222',
-          fontFamily: 'Roboto',
-          padding: '16px 8px',
-          boxShadow: '1px 1px 10px 1px rgb(0 0 0 / 10%)',
-        }}
-        buttonStyle={{
-          color: 'white',
-          background: colors.primary,
-          fontSize: '14px',
-          padding: '8px 32px',
-          borderRadius: '25px',
-          position: 'relative',
-          top: '8px',
-        }}
-        expires={150}
-      >
-        Na našom webe používame cookies, aby sme vám poskytli čo
-        najrelevantnejší zážitok tým, že sme si pamätali vaše preferencie a
-        opakované návštevy. Kliknutím na „Prijať“ súhlasíte s použitím všetkých
-        cookies.
-      </CookieConsent>
     </>
   );
 };

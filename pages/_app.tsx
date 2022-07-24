@@ -43,7 +43,11 @@ function App({ Component, pageProps }: AppProps) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
         />
-        <meta name="description" content="" />
+        <meta name="description" content="Moderná zubná klinika z Popradu" />
+        <meta
+          name="keywords"
+          content="zub, zuby, ambulancia, zubár, bielenie zubov, dentálna hygiena, stomatologická churirgia, protetická stomatológia, záchovná stomatológia, zubné implantáty"
+        />
       </Head>
       <ApolloProvider>
         <AuthProvider>
