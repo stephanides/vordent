@@ -1,5 +1,6 @@
 import { Col } from 'reactstrap';
 import Link from 'next/link';
+import Image from 'next/image';
 import styled from 'styled-components';
 import { colors, Paragraph } from '../../design';
 import { ArrowRight } from '../../design/icons/ArrowRight';
@@ -16,7 +17,9 @@ export const BlogThumbnail = (props: BlogThumbnailProps) => {
     <StyledCol size={12} lg={4} md={6} data-aos="fade-up" data-aos-once="true">
       <ImageWrapper>
         <Link href={`blog/${slug}`}>
-          <Image url={image.path} />
+          <ImageHolder>
+            <Image layout="fill" objectFit="contain" src={image.path} />
+          </ImageHolder>
         </Link>
       </ImageWrapper>
       <Content>
@@ -45,21 +48,11 @@ const StyledCol = styled(Col)`
   margin-bottom: 32px;
 `;
 
-type ImageProps = {
-  url: string;
-};
-const Image = styled.div<ImageProps>`
+const ImageHolder = styled.div`
   width: 100%;
   height: 277px;
-  transition: all 0.3s ease-out;
-  background-image: url(${({ url }) => (url ? url : '')});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
   cursor: pointer;
-  &:hover {
-    transform: scale(1.1);
-  }
+  position: relative;
 `;
 
 const ImageWrapper = styled.div`

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styled from 'styled-components';
 import { colors, Heading6, Paragraph, media } from '../../../shared/design';
 import { ArrowRight } from '../../../shared/design/icons/ArrowRight';
@@ -9,7 +10,9 @@ export const ServiceSlide = (props: Service) => {
   return (
     <Wrapper>
       <Header>
-        <Image src={icon} alt={title} />
+        <ImageWrapper>
+          <Image layout="fill" objectFit="contain" src={icon} alt={title} />
+        </ImageWrapper>
         <Title>{title}</Title>
       </Header>
       <Description>{description}</Description>
@@ -34,21 +37,19 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
+const ImageWrapper = styled.div`
+  width: 66px;
+  min-width: 66px;
+  height: 68px;
+  position: relative;
+`;
+
 const Header = styled.div`
   display: flex;
   align-items: flex-start;
   ${media.down.lg} {
     flex-direction: column;
     align-items: flex-start;
-  }
-`;
-
-const Image = styled.img`
-  margin: 0 auto;
-  display: block;
-  user-select: none;
-  ${media.down.lg} {
-    margin: 0;
   }
 `;
 

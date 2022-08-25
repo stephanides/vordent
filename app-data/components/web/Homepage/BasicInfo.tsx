@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Row, Col } from 'reactstrap';
 import styled from 'styled-components';
@@ -23,7 +24,14 @@ export const BasicInfo = () => {
     <StyledContainer>
       <StyledRow>
         <Col lg={6} md={12}>
-          <Image src={images[activeTab]} />
+          <div style={{ width: '100%' }}>
+            <Image
+              width={2400}
+              height={1600}
+              layout="responsive"
+              src={images[activeTab]}
+            />
+          </div>
         </Col>
         <Col lg={6} md={12}>
           <Content>
@@ -112,10 +120,6 @@ const StyledRow = styled(Row)`
   ${media.down.lg} {
     flex-direction: column-reverse;
   }
-`;
-
-const Image = styled.img`
-  width: 100%;
 `;
 
 const TabsPicker = styled.div`

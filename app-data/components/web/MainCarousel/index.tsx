@@ -25,7 +25,7 @@ export const MainCarousel = () => {
               description="Nadštandardné komplexné stomatologické ošetrenie všetkých vekových skupín."
               url="/cennik"
               buttonTitle="Cenník"
-              imageUrl="/gifs/homepage_carousel_1.gif"
+              imageUrl="/gifs/homepage_carousel_1.webp"
               key="slide-1"
             />
           </SwiperSlide>

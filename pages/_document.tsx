@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
 import React from 'react';
+import Script from 'next/script';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
@@ -40,9 +41,9 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
             rel="stylesheet"
           />
-          <script
+          <Script
             id="cookieyes"
-            type="text/javascript"
+            strategy="lazyOnload"
             src="https://cdn-cookieyes.com/client_data/60740093020de7fe6cb65261/script.js"
           />
         </Head>

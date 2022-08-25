@@ -20,7 +20,12 @@ export const OurTeam = () => {
         <ActionText>
           Máš záujem sa stať súčasťou našej <strong>modernej kliniky</strong>?
         </ActionText>
-        <StyledPrimaryButton>Voľné pozície</StyledPrimaryButton>
+        <a
+          href="https://kariera.zoznam.sk/ponuky-spolocnosti/-/aesculap-dent-s-r-o-"
+          target="_blank"
+        >
+          <StyledPrimaryButton>Voľné pozície</StyledPrimaryButton>
+        </a>
       </ActionWrapper>
     </CustomContainer>
   );

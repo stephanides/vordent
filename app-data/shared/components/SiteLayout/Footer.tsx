@@ -26,10 +26,16 @@ export const Footer = () => {
             <StyledCol size={12} md={6} xl={3}>
               <SectionTitle>Sledujte nás</SectionTitle>
               <SocialHolder>
-                <SocialLink href="/">
+                <SocialLink
+                  href="https://www.facebook.com/vordentclinic"
+                  target="_blank"
+                >
                   <Facebook />
                 </SocialLink>
-                <SocialLink href="/">
+                <SocialLink
+                  href="https://www.instagram.com/vordentclinic/"
+                  target="_blank"
+                >
                   <Instagram />
                 </SocialLink>
               </SocialHolder>
