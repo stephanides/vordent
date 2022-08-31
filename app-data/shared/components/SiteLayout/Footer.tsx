@@ -44,10 +44,7 @@ export const Footer = () => {
               <SectionTitle>Navigácia</SectionTitle>
               <Section>
                 <NavHolder>
-                  <Link href="/sluzby">
-                    <NavLink>Služby</NavLink>
-                  </Link>
-                  <Link href="/o-nas">
+                  <Link href="/nas-tim">
                     <NavLink>O nás</NavLink>
                   </Link>
                   <Link href="/cennik">
@@ -66,22 +63,22 @@ export const Footer = () => {
               <SectionTitle>Služby</SectionTitle>
               <Section>
                 <NavHolder>
-                  <Link href="/zubne-implantaty">
+                  <Link href="/sluzby/zubne-implantaty">
                     <NavLink>Zubné implantáty</NavLink>
                   </Link>
-                  <Link href="/proteticka-stomatologia">
+                  <Link href="/sluzby/proteticka-stomatologia">
                     <NavLink>Protetická stomatológia</NavLink>
                   </Link>
-                  <Link href="/stomatologicka-chirurgia">
+                  <Link href="/sluzby/stomatologicka-chirurgia">
                     <NavLink>Stomatologická chirurgia</NavLink>
                   </Link>
-                  <Link href="/zachovna-stomatologia">
+                  <Link href="/sluzby/zachovna-stomatologia">
                     <NavLink>Zachovná stomatológia</NavLink>
                   </Link>
-                  <Link href="/dentalna-hygiena">
+                  <Link href="/sluzby/dentalna-hygiena">
                     <NavLink>Dentálna hygiena</NavLink>
                   </Link>
-                  <Link href="/bielenie-zubov">
+                  <Link href="/sluzby/bielenie-zubov">
                     <NavLink>Bielenie zubov</NavLink>
                   </Link>
                 </NavHolder>

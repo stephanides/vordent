@@ -28,7 +28,7 @@ function sendContactFormEmail(formData: any): Promise<void> {
       } else {
         await transporter.sendMail({
           from: '"Vordent" <objednavky@vordent.sk>',
-          to: 'info@vordent.sk', // list of receivers
+          to: 'vordentrecepecia@gmail.com', // list of receivers
           subject: 'Objednávka zo stránky vordent.sk', // Subject line
           html: `<p>Meno a priezvisko: ${formData.firstName} ${formData.surname}</p><p>Email: <a href='mailto:${formData.email}'>${formData.email}</a></p><p>Telefón: <a href='tel:${formData.phone}'>${formData.phone}</a></p><p>Správa: <span style="font-weight: bold">${formData.message}</span></p><p>Služba: <span style="font-weight: bold">${formData.service}</span></p>`, // html body
         });

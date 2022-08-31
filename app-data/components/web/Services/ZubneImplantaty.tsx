@@ -26,7 +26,7 @@ export const ZubneImplantaty = () => {
     <Wrapper>
       <ServiceHeading
         category="Zubné implantáty"
-        title="Zubné implantáty, načo slúžia?"
+        title="Náhrada chýbajúcich zubov"
         subTitle="Elegantné, šetrné a kvalitné riešenie straty jedného
         alebo viacerých zubov."
         image="/images/services/zubne_implantaty.png"
@@ -41,18 +41,11 @@ export const ZubneImplantaty = () => {
               špeciálnou povrchovou úpravou.
             </ServiceParagraph>
             <ServiceParagraph>
-              Pri drobnom chirurgickom výkone sa začlení do čeľuste na miesto
+              Pri drobnom chirurgickom výkone sa začlení do kosti, na miesto
               chýbajúceho zuba. Výhodou implantátu je možnosť zhotovenia pevných
               zubných náhrad bez nutnosti brúsenia a umŕtvovania vlastných zubov
               a tiež v prípadoch, kedy nie je kvôli výraznej strate chrupu možné
               zhotoviť klasický mostík.
-            </ServiceParagraph>
-            <ServiceParagraph>
-              Bežným, no väčšinou nevyhovujúcim spôsobom ošetrenia čeľuste alebo
-              sánky je zhotovenie celkovo snímateľnej náhrady (protézy). Takéto
-              riešenie často prináša veľa problémov, ako je nestabilita náhrady
-              pri rozprávaní a žuvaní, strata chuti a v neposlednom rade tiež
-              psychickú frustráciu zo snímateľnej náhrady a bezzubých úst.
             </ServiceParagraph>
           </ServiceSection>
         </ServiceContent>
@@ -78,8 +71,7 @@ export const ZubneImplantaty = () => {
         </ServiceSection>
         <ServiceSection background="#F4F7F8">
           <ServiceSectionTitle>
-            <strong>Strach</strong> z bolesti? U nás sa <strong>bolesti</strong>{' '}
-            obávať <strong>nemusíte</strong>.
+            U nás sa <strong>bolesti</strong> obávať <strong>nemusíte</strong>.
           </ServiceSectionTitle>
           <ServiceContent>
             <ServiceParagraph>
@@ -98,15 +90,15 @@ export const ZubneImplantaty = () => {
             <ServiceParagraph>
               Všetko závisí od typu implantátu a náročnosti výkonu. Hojenie
               implantátu trvá 3-6 mesiacov, záleží od miesta implantácie (v
-              sánke 3 mesiace, v čeľusti 6 mesiacov). Náš zubný technik a
-              implantológ urobia všetko preto aby ste čo najskôr odišli s novým
-              úsmevom.
+              sánke 3 mesiace, v čeľusti 6 mesiacov). Po potrebnej dobe hojenia
+              sa zhotovia odtlačky a náš zubný technik urobí všetko preto, aby
+              ste čo najskôr odišli s novým úsmevom.
             </ServiceParagraph>
             <ServiceParagraph>
-              Po úspešnom odovzdaní protetickej náhrady, je potrebné dodržiavať
+              Po úspešnom odovzdaní protetickej náhrady, je potrebné absolvovať
               dentálnu hygienu a chodiť na pravidelné kontroly, ktoré majú byť
               minimálne raz za pol roka. Pacienti, ktorí sa zúčastňujú dentálnej
-              hygieny pravidelne majú predĺženú záruku na implantát.
+              hygieny pravidelne, majú predĺženú záruku na implantát.
             </ServiceParagraph>
           </ServiceContent>
         </ServiceSection>
@@ -114,7 +106,7 @@ export const ZubneImplantaty = () => {
         <ServiceContent>
           <ServiceSection>
             <ServiceSectionTitle>
-              Zubné <strong>miniimplantáty</strong>
+              Zubná protéza na <strong>miniimplantátoch</strong>
             </ServiceSectionTitle>
             <Row>
               <Col md={6} sm={12}>
@@ -125,14 +117,16 @@ export const ZubneImplantaty = () => {
               </Col>
               <Col md={6} sm={12}>
                 <ServiceParagraph>
-                  Zubné miniimplantáty sú implantačné skrutky malého priemeru
-                  vyrobené z titánovej zliatiny. Majú menší priemer než
-                  implantáty klasické. Po vyvŕtaní malého vstupného otvoru sa
+                  Zubné miniimplantáty majú menší priemer než implantáty
+                  klasické. Po vyvŕtaní malého vstupného otvoru sa
                   miniimplantáty“ zaskrutkujú” do kosti. V ústach sú potom
                   viditeľné malé guľovité hlavičky, na ktoré sa “zacvakne” vaša
-                  protéza, do ktorej sa predtým umiestnia kovové čiapočky.
-                  Miniimplantáty slúžia ako podpora (ukotvenie) pre prechodné i
-                  dlhodobé upevnenie a stabilizáciu zubnej protézy.
+                  protéza, do ktorej sa predtým umiestnia kovové čiapočky. Zubnú
+                  protézu je možné upevniť na dvoch implantátoch (najčastejšie
+                  pre dolnú protézu) alebo na štyroch implnantátoch
+                  (najčastejšie pre hornú protézu). Miniimplantáty slúžia ako
+                  podpora (ukotvenie) pre prechodné i dlhodobé upevnenie a
+                  stabilizáciu zubnej protézy.
                 </ServiceParagraph>
               </Col>
             </Row>
@@ -141,59 +135,20 @@ export const ZubneImplantaty = () => {
         <Divider />
         <ServiceSection>
           <ServiceContent>
-            <BlockWithDivider>
-              <Block>
-                <ServiceSectionTitle>
-                  Protéza na <strong>štyroch</strong> implantátoch
-                </ServiceSectionTitle>
-                <ServiceParagraph>
-                  Odnímateľná protéza upevnená na štyroch implantátoch sa
-                  využíva v prípade nedostatku kosti u pacienta. Najčastejšie
-                  pre hornú protézu.
-                </ServiceParagraph>
-              </Block>
-              <VerticalDivider />
-              <Block>
-                <ServiceSectionTitle>
-                  Protéza na <strong>dvoch</strong> implantátoch
-                </ServiceSectionTitle>
-                <ServiceParagraph>
-                  Odnímateľná protéza upevnená na dvoch implantátoch sa využíva
-                  v prípade rapídnej straty kosti a ďasien. Najčastejšie pre
-                  dolnú protézu.
-                </ServiceParagraph>
-              </Block>
-            </BlockWithDivider>
-          </ServiceContent>
-        </ServiceSection>
-        <Divider />
-        <ServiceSection>
-          <ServiceContent>
             <ServiceSectionTitle>
               <strong>Metóda</strong> All on four a All on six
             </ServiceSectionTitle>
             <ServiceParagraph>
-              Pri liečbe All on four chirurg umiestni 4 implantáty a pri liečbe
-              All on six 6 implantátov do čeľuste alebo sánky pacienta. Ide o
-              estetické a najmä pohodlné riešenie, ktoré radikálne zvýši kvalitu
-              života svojmu nositeľovi. Poskytuje možnosť opäť schuti jesť a
-              smiať sa s krásnym úsmevom. Výhodou oproti bežnej snímateľnej
-              protéze je to, že sa prichytí o tieto implantáty a dokonale, pevne
-              sedí. Môžete sa teda schuti najesť, smiať sa, rozprávať. Neodiera,
-              nepadá, “nelieta” v ústach.
-            </ServiceParagraph>
-            <ServiceParagraph>
-              Zubné implantáty All-on poskytujú dlhodobú možnosť nahradiť a
-              zrekonštruovať chýbajúce zuby, ak pacient stratil všetky alebo
-              väčšinu zubov v jednej alebo obidvoch čeľustiach. Vďaka
+              Zubné implantáty zavádzané v podobe metódy All-on poskytujú
+              dlhodobú možnosť nahradiť a zrekonštruovať chýbajúce zuby. Vďaka
               strategickému umiestneniu každého implantátu z hľadiska
               vzdialenosti, uhla a hĺbky, môže štruktúra All-on podporiť celý
               oblúk nových zubov s použitím len štyroch alebo šiestich
               implantátov.
             </ServiceParagraph>
             <ServiceParagraph>
-              Metóda All on 4 je považovaná za veľmi populárnu, pretože je
-              vhodná pre takmer každého. Čím viac implantátov sa použije, tým
+              Metóda All on je považovaná za veľmi populárnu, pretože je vhodná
+              pre takmer každého. Čím viac implantátov sa použije, tým
               stabilnejšia a silnejšia je štrukturálna integrita nových zubov,
               nakoľko sa tlak distribuuje na viac implantátov a tým sa
               rovnomerne prenáša na samotnú čeľusť. Nemožno však povedať, že čím
@@ -214,7 +169,7 @@ export const ZubneImplantaty = () => {
         <ServiceContent>
           <ServiceSection>
             <ServiceSectionTitle>
-              Je <strong>zubný implantát</strong> pre vás vhodný?
+              Je pre Vás vhodný <strong>zubný implantát</strong>?
             </ServiceSectionTitle>
             <Row>
               <Col md={6} sm={12}>
@@ -229,13 +184,9 @@ export const ZubneImplantaty = () => {
                       </AccordionTitle>
                     </StyledAccordionSummary>
                     <StyledAccordionDetails>
-                      Mnoho samozvaných zdrojov nesprávne informuje, že zubné
-                      implantáty nie je možné implantovať pri osteoporóze,
-                      cukrovke či pri inom chronickom ochorení. Tieto tvrdenia
-                      nie sú bez výnimky založené na pravde. Ak sú tieto
-                      Ochorenia správne liečené a stabilizované, je možné použiť
-                      zubné implantáty s porovnateľnou úspešnosťou aká je
-                      dosahovaná pri zdravých jedincoch.
+                      Ak sú tieto ochorenia správne liečené a stabilizované, je
+                      možné použiť zubné implantáty s porovnateľnou úspešnosťou
+                      aká je dosahovaná pri zdravých jedincoch.
                     </StyledAccordionDetails>
                   </StyledAccordion>
                   <StyledAccordion>
@@ -246,10 +197,9 @@ export const ZubneImplantaty = () => {
                       <AccordionTitle>Tuhí fajčiari</AccordionTitle>
                     </StyledAccordionSummary>
                     <StyledAccordionDetails>
-                      Fajčenie je rizikom z dlhodobého hľadiska, pretože narúša
-                      dlhodobú stabilitu zubných implantátov. To je však možné
-                      alternatívnymi spôsobmi obmedziť. Pri fajčení stráca
-                      pacient záruku na implantát.
+                      Fajčenie je veľkým rizikom správneho hojenia zubných
+                      implantátov, pretože dokáže vytvoriť zápal, ktorý naruší
+                      ich stabilitu v kosti.
                     </StyledAccordionDetails>
                   </StyledAccordion>
                   <StyledAccordion>
@@ -264,11 +214,10 @@ export const ZubneImplantaty = () => {
                     <StyledAccordionDetails>
                       V prípade prítomnosti akútneho ale predovšetkým
                       chronického zápalu ústnej dutiny, nie je možné a vhodné
-                      zavádzať zubné implantáty. (Napr. nestabilná
-                      paradontitída/paradontóza, zle ošetrené zuby s nálezom a
-                      podobne.) Najprv je treba odstrániť dôvod zápalu, prípadne
-                      stabilizovať ochorenie a až následne je možné zvažovať
-                      ďalší postup.
+                      zavádzať zubné implantáty (napr. nestabilná parodontitída,
+                      zlé ošetrené zuby s nálezom a podobne). Najprv je treba
+                      odstrániť dôvod zápalu, prípadne stabilizovať ochorenie a
+                      až následne je možné zvažovať ďalší postup.
                     </StyledAccordionDetails>
                   </StyledAccordion>
                 </AccordionWrapper>

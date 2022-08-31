@@ -22,7 +22,7 @@ export const ZachovnaStomatologia = () => {
       <ServiceHeading
         category="Záchovná stomatológia"
         title="Kráľovná stomatologických odborov"
-        subTitle="Záchovná stomatológia, často označovaná ako aj kráľovná stomatologických odborov."
+        subTitle=""
         image="/images/services/zachovna_stomatologia.png"
       />
       <CustomContainer>
@@ -33,31 +33,29 @@ export const ZachovnaStomatologia = () => {
             </ServiceSectionTitle>
             <ServiceParagraph>
               Úlohou záchovnej stomatológie je udržať vaše vlastné zuby živé a
-              zdravé. Zaoberá sa nielen korigovaním zubných defektov
-              (najčastejšie odstránením zubných kazov, plombami či koreňovými
-              výplňami), ale aj prevenciou v podobe pečatenia zubov u detí a
-              podporou profesionálnej a domácej ústnej hygieny.
+              zdravé a predchádzať tak vzniku problémov. Tiež sa však môžu
+              vyskytnúť v dôsledku zanedbania ústnej hygieny, alebo nesprávnej
+              životosprávy.
             </ServiceParagraph>
           </ServiceSection>
         </ServiceContent>
         <Divider />
         <ServiceSection>
           <ServiceSectionTitle>
-            Záchovná <strong>stomatológia</strong> vo{' '}
-            <strong>Vordent clinic</strong> zahŕňa :
+            <strong>Záchovná stomatológia</strong> vo Vordent clinic zahŕňa:
           </ServiceSectionTitle>
           <Row>
             <Col xl={3} md={6} sm={12}>
               <ZachovnaStomatologiaCard title="Ošetrenie zubného kazu" />
             </Col>
             <Col xl={3} md={6} sm={12}>
-              <ZachovnaStomatologiaCard title="Paradontológia" />
+              <ZachovnaStomatologiaCard title="Endodoncia" />
             </Col>
             <Col xl={3} md={6} sm={12}>
-              <ZachovnaStomatologiaCard title="Pečatenie detských zubov" />
+              <ZachovnaStomatologiaCard title="Reendodoncia" />
             </Col>
             <Col xl={3} md={6} sm={12}>
-              <ZachovnaStomatologiaCard title="Endodontické ošetrenie" />
+              <ZachovnaStomatologiaCard title="Pečatenie" />
             </Col>
           </Row>
         </ServiceSection>
@@ -81,11 +79,11 @@ export const ZachovnaStomatologia = () => {
               Každý zákrok v ústnej dutine robíme v lokálnej anestéze. Zub, s
               ktorým pracujeme, izolujeme kofferdamovou membránou (tá nám
               umožňuje vytvoriť sterilné operačné pole bez slín a baktérií
-              ústnej dutiny). Kazy preparujeme a odstraňujeme pod mikroskopom
-              pri veľkom zväčšení alebo lupou s použitím detektora zubného kazu.
-              Po odstránení kazu pokračujeme rekonštrukciou chýbajúcich tkanív
-              prostredníctvom fotokompozitných materiálov. Po ukončení modelácie
-              výplne sa zub leští a artikuluje.”
+              ústnej dutiny). Kazy preparujeme a odstraňujeme s použitím
+              detektora zubného kazu. Po odstránení kazu pokračujeme
+              rekonštrukciou chýbajúcich tkanív prostredníctvom fotokompozitných
+              materiálov. Po ukončení modelácie výplne sa zub leští a
+              artikuluje.
             </ServiceParagraph>
           </ServiceSection>
         </ServiceContent>
@@ -124,14 +122,10 @@ export const ZachovnaStomatologia = () => {
             <ServiceSectionTitle>
               <strong>Endodontické </strong>ošetrenie
             </ServiceSectionTitle>
-            <ServiceSectionSubTitle>
-              Koreňové ošetrenie zuba (<strong>endodoncia</strong> a{' '}
-              <strong>reendodoncia</strong>)
-            </ServiceSectionSubTitle>
             <ServiceParagraph>
-              Endodonciu vykonávame v prípade, že kaz už zasahuje do zubnej
-              drene alebo v prípade, že sme sa v priebehu ošetrenia hlbokého
-              kazu dostali až k nervu.
+              Koreňové ošetrenie zuba vykonávame v prípade, že kaz už zasahuje
+              do zubnej drene alebo v prípade, že sme sa v priebehu ošetrenia
+              hlbokého kazu dostali až k nervu.
             </ServiceParagraph>
             <ServiceParagraph>
               Cieľom endodoncie je bezbolestne zbaviť zub nekrotickej časti
@@ -141,9 +135,13 @@ export const ZachovnaStomatologia = () => {
               kanálikov horúcou guttaperčou nasleduje postendodontické ošetrenie
               zuba - modelovanie alebo protetická náhrada.
             </ServiceParagraph>
-            <ServiceSectionSubTitle>
+          </ServiceContent>
+        </ServiceSection>
+        <ServiceSection>
+          <ServiceContent>
+            <ServiceSectionTitle>
               <strong>Reendodontické</strong> ošetrenie
-            </ServiceSectionSubTitle>
+            </ServiceSectionTitle>
             <ServiceParagraph>
               Reendodontické ošetrenie je výkon, ktorý je indikovaný pri zlyhaní
               prvotného endodotického ošetrenia. Najčastejšou príčinou zlyhania
@@ -152,11 +150,10 @@ export const ZachovnaStomatologia = () => {
               Inou z príčin môže byť zložitá anatómia koreňového systému a s ňou
               súvisiace komplikácie ako zalomenie koreňového nástroja alebo
               prehliadnutie nadpočetného kanáliku. Odhaliť štruktúry o veľkosti
-              niekoľko stotín milimetrov voľným okom je takmer nemožné. A práve
-              nájdenie a následné ošetrenie nadpočetného kanáliku môže byť
-              kľúčom k úspechu, pretože nesprávne endodonticky ošetrené zuby sú
-              ideálnym prostredím pre množenie baktérií. V oblasti koreňa tak
-              vzniká cysta alebo neohraničený zápal, šíriaci sa do celého tela.
+              niekoľko stotín milimetrov voľným okom je takmer nemožné.
+              Nesprávne endodonticky ošetrené zuby sú ideálnym prostredím pre
+              množenie baktérií, v oblasti koreňa tak vzniká cysta alebo
+              neohraničený zápal šíriaci sa do celého tela.
             </ServiceParagraph>
           </ServiceContent>
         </ServiceSection>

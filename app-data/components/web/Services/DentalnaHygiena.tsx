@@ -19,7 +19,7 @@ export const DentalnaHygiena = () => {
       <ServiceHeading
         category="Dentálna hygiena"
         title="Pre Váš zdravý úsmev"
-        subTitle="Kompletná dentálna hygiena pre Váš zdravý úsmev a pravidelnú starostlivosť."
+        subTitle=""
         image="/images/services/dentalna_hygiena.png"
       />
       <CustomContainer>
@@ -42,61 +42,60 @@ export const DentalnaHygiena = () => {
         <ServiceContent>
           <ServiceSection>
             <ServiceSectionTitle>
-              <strong>Dentálna hygiena</strong> vo{' '}
-              <strong>Vordent clinic</strong> zahŕňa:
+              <strong>Dentálna hygiena</strong> vo Vordent clinic zahŕňa:
             </ServiceSectionTitle>
             <List>
               <ListItem>
-                <strong>Komplexné vyšetrenie ústnej dutiny</strong> - anamnéza,
+                <strong>komplexné vyšetrenie ústnej dutiny</strong> - anamnéza,
                 analýza snímkov (OPG, CT, IO, BTW), parodontálne vyšetrenie
                 pomocou indexov a zhodnotenie stavu tvrdých zubných tkanív,
                 oboznámenie klienta s aktuálnym stavom a následným liečebným
-                plánom
+                plánom,
               </ListItem>
               <ListItem>
-                <strong>Piezon ultrazvuk</strong> - odstránenie hrubých nánosov
-                zubného kameňa
+                <strong>piezon ultrazvuk</strong> - odstránenie hrubých nánosov
+                zubného kameňa,
               </ListItem>
               <ListItem>
-                <strong>Deep scalling</strong> - ručné odstraňovanie zubného
+                <strong>deep scalling</strong> - ručné odstraňovanie zubného
                 kameňa a povlakov nad aj pod úrovňou ďasna (parodontálne vačky)
-                s použitím špecializovaných nástrojov
+                s použitím špecializovaných nástrojov,
               </ListItem>
               <ListItem>
-                <strong>Air flow</strong> - pieskovanie pomocou systému Airflow,
+                <strong>air flow</strong> - pieskovanie pomocou systému Airflow,
                 je to nízko abrazívna metóda, ktorá zo zubov odstraňuje povlak,
                 pigmenty a rôzne ďalšie nečistoty. Vďaka špeciálnym práškom,
                 udržiava stabilitu baktérií v ústach, a tým predchádza vzniku
-                zubného povlaku, kazu či parodontologických ochorení
+                zubného povlaku, kazu či parodontologických ochorení,
               </ListItem>
               <ListItem>
-                <strong>Polishing</strong> - odstraňovanie pigmentácií použitím
-                profylaktických pást
+                <strong>polishing</strong> - odstraňovanie pigmentácií použitím
+                profylaktických pást,
               </ListItem>
               <ListItem>
-                <strong>Lokálna fluoridácia</strong> - ošetrenie skloviny zubov
+                <strong>lokálna fluoridácia</strong> - ošetrenie skloviny zubov
                 s použitím špeciálnych pást, gélov alebo lakov, ktoré zabezpečia
                 jej remineralizáciu ako prevencia proti vzniku zubných kazov a
-                hypersenzitivity zubov
+                hypersenzitivity zubov,
               </ListItem>
               <ListItem>
-                <strong>Motivácia a inštruktáž</strong> - priama práca s
+                <strong>motivácia a inštruktáž</strong> - priama práca s
                 klientom - výber vhodných pomôcok na každodennú starostlivosť
                 podľa daného stavu, výber veľkostí, typov, postupy, techniky -
                 efektivita, doporučenie chemických produktov - ak to stav
-                vyžaduje
+                vyžaduje,
               </ListItem>
               <ListItem>
-                <strong>Výživové poradenstvo</strong> - vysvetlenie vplyvu
+                <strong>výživové poradenstvo</strong> - vysvetlenie vplyvu
                 potravín a nápojov na zubnú sklovinu, vhodnosť a nevhodnosť
-                návykov pri ich konzumácií
+                návykov pri ich konzumácií,
               </ListItem>
               <ListItem>
-                <strong>Špeciálny a individuálny prístup</strong> k detskému
-                pacientovi citlivým a bezbolestným prístupom
+                <strong>špeciálny a individuálny prístup</strong> k detskému
+                pacientovi citlivým a bezbolestným prístupom,
               </ListItem>
               <ListItem>
-                <strong>Bielenie zubov </strong>
+                <strong>bielenie zubov.</strong>
               </ListItem>
             </List>
             <InstrumentHolder>

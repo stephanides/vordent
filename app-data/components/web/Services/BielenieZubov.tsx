@@ -47,7 +47,7 @@ export const BielenieZubov = () => {
             </ServiceParagraph>
             <ServiceParagraph bold>
               Po bielení by ste sa mali vyvarovať fajčeniu, pitiu čajov, kávy,
-              červeného vína a ovocných štiav, dodržiavať tzv. bielu diétu.
+              červeného vína a ovocných štiav, teda dodržiavať tzv. bielu diétu.
             </ServiceParagraph>
             <InstrumentHolder>
               <Instrument />

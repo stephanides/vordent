@@ -52,7 +52,7 @@ export const BasicInfo = () => {
                 active={activeTab === 2}
                 onClick={() => setActiveTab(2)}
               >
-                Chirurgia
+                Náš tím
               </GroupButton>
             </TabsPicker>
             {activeTab === 0 && (
