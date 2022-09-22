@@ -29,7 +29,7 @@ export const ZubneImplantaty = () => {
         title="Náhrada chýbajúcich zubov"
         subTitle="Elegantné, šetrné a kvalitné riešenie straty jedného
         alebo viacerých zubov."
-        image="/images/services/zubne_implantaty.png"
+        image="/gifs/services/implantaty.webp"
       />
       <CustomContainer>
         <ServiceContent>

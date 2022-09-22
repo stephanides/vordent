@@ -82,12 +82,14 @@ const Image = styled.img`
   max-width: 964px;
   position: absolute;
   bottom: -200px;
+  border-radius: 12px;
   ${media.down.lg} {
     max-width: calc(100% - 32px);
   }
   ${media.down.md} {
     position: relative;
     max-width: 100%;
+    border-radius: 0;
     bottom: 0;
   }
 `;

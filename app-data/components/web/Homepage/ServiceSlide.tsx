@@ -9,13 +9,15 @@ export const ServiceSlide = (props: Service) => {
   const { icon, title, description, url } = props;
   return (
     <Wrapper>
-      <Header>
-        <ImageWrapper>
-          <Image layout="fill" objectFit="contain" src={icon} alt={title} />
-        </ImageWrapper>
-        <Title>{title}</Title>
-      </Header>
-      <Description>{description}</Description>
+      <div>
+        <Header>
+          <ImageWrapper>
+            <Image layout="fill" objectFit="contain" src={icon} alt={title} />
+          </ImageWrapper>
+          <Title>{title}</Title>
+        </Header>
+        <Description>{description}</Description>
+      </div>
       <Link href={url}>
         <ReadMore>
           Zistiť viac
@@ -72,7 +74,9 @@ const Title = styled(Heading6)`
 
 const Description = styled(Paragraph)`
   font-weight: 300;
-  margin-top: 24px;
+  margin-bottom: 30px;
+  line-height: 1.7rem;
+  margin-top: 16px;
   text-align: left;
   user-select: none;
 `;

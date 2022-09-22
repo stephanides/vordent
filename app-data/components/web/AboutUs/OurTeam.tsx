@@ -47,7 +47,7 @@ const ActionWrapper = styled.div`
     padding: 32px 40px;
   }
   ${media.down.md} {
-    align-items: flex-start;
+    align-items: center;
     margin-top: 60px;
   }
   ${media.down.sm} {
@@ -88,6 +88,10 @@ const ActionText = styled(Paragraph)`
   }
   ${media.down.lg} {
     margin-bottom: 16px;
+  }
+  ${media.down.md} {
+    text-align: center;
+    margin-bottom: 24px;
   }
   ${media.down.sm} {
     margin-left: 0;

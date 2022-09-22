@@ -26,7 +26,7 @@ export const ProtetickaStomatologia = () => {
         category="Protetická stomatológia"
         title="Náhrada chýbajúcich zubov"
         subTitle="Úlohou protetickej stomatológie je nahradiť chýbajúce zuby a tým zlepšiť alebo obnoviť žuvaciu a estetickú schopnosť pacienta."
-        image="/images/services/proteticka_stomatologia.png"
+        image="/gifs/services/protetika.webp"
       />
       <CustomContainer>
         <ServiceSection>

@@ -10,17 +10,19 @@ export const AmbulanceEquipment = () => {
       <Wrapper>
         <Row>
           <Col lg={6} md={12}>
-            <Pretitle>Špičkové technológie</Pretitle>
-            <NormalTitle>
-              Vybavenie
-              <br />
-              naších ambulancií
-            </NormalTitle>
-            <Description>
-              Pre zlepšenie diagnostických možností a pre zvýšenie kvality
-              poskytnutých stomatologických služieb je naša klinika vybavená
-              prístrojmi a materiálmi najvyššej kvality.
-            </Description>
+            <Box>
+              <Pretitle>Špičkové technológie</Pretitle>
+              <NormalTitle>
+                Vybavenie
+                <br />
+                naších ambulancií
+              </NormalTitle>
+              <Description>
+                Pre zlepšenie diagnostických možností a pre zvýšenie kvality
+                poskytnutých stomatologických služieb je naša klinika vybavená
+                prístrojmi a materiálmi najvyššej kvality.
+              </Description>
+            </Box>
           </Col>
           <Col lg={6} md={12}>
             <Ambulance src="/images/our-team/ambulance.png" alt="Ambulance" />
@@ -39,6 +41,17 @@ const Wrapper = styled.div`
   border-bottom: 2px solid rgba(214, 223, 229, 0.72);
   ${media.down.lg} {
     text-align: center;
+  }
+`;
+
+const Box = styled.div`
+height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  ${media.down.lg}{
+    align-items: center;
   }
 `;
 

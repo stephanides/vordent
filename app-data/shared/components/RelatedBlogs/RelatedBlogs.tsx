@@ -35,10 +35,10 @@ export const RelatedBlogs = (props: RelatedBlogsProps) => {
   const blogsToShow = filteredBlogs.slice(0, 3);
   return (
     <Wrapper>
+      <SectionTitle>Ďalšie blogy</SectionTitle>
       <SvgHolder>
         <ZoomOrnament />
       </SvgHolder>
-      <SectionTitle>Ďalšie blogy</SectionTitle>
       <CustomContainer>
         <Row>
           {blogsToShow.map((blog: Blog) => (

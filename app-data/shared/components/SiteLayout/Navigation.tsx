@@ -156,7 +156,7 @@ export const Navigation = () => {
           <MobileNavContent mobileOpen={isOpen}>
             <div>
               <MobileNavLink onClick={toggleServices}>
-                <MobileNavContentItem>
+                <MobileNavContentItem ml='8px'>
                   Služby
                   <ArrowHolder isOpen={servicesCollapse}>
                     <Arrow />
@@ -208,7 +208,7 @@ export const Navigation = () => {
                 </Link>
               </Collapse>
               <MobileNavLink onClick={toggleAboutUs}>
-                <MobileNavContentItem>
+                <MobileNavContentItem ml='8px'>
                   O nás
                   <ArrowHolder isOpen={aboutUsCollapse}>
                     <Arrow />

@@ -165,7 +165,11 @@ export const MobileNavContentIconHolder = styled.div`
   position: relative;
 `;
 
-export const MobileNavContentItem = styled.div`
+type MobileNavContentItemProps = {
+  ml?: string
+}
+
+export const MobileNavContentItem = styled.div<MobileNavContentItemProps>`
   position: relative;
   display: flex;
   padding: 24px 40px;
@@ -175,6 +179,7 @@ export const MobileNavContentItem = styled.div`
   cursor: pointer;
   transition: all 0.3s ease-out;
   font-weight: 500;
+  margin-left: ${({ml}) => ml ? ml : 0};
   &:hover {
     background-color: rgba(0, 95, 166, 0.1);
   }

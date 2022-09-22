@@ -5,7 +5,7 @@ import {
   FacebookShare,
   RelatedBlogs,
 } from '../../../shared/components';
-import { colors, Paragraph } from '../../../shared/design';
+import { colors, media, Paragraph } from '../../../shared/design';
 import { Blog } from '../../../shared/types';
 
 type BlogDetailProps = {
@@ -31,7 +31,7 @@ export const BlogDetail: FC<BlogDetailProps> = (props) => {
           </ReadingTime>
           <NormalTitle>{title}</NormalTitle>
           <Description>{description}</Description>
-          <TitleImage src={image.path} alt="Blog image" />
+          <TitleImage src={image.path} />
           <ContentText dangerouslySetInnerHTML={renderDescription(content)} />
           <ActionWrapper data-aos="fade-up" data-aos-once="true">
             <ShareText>
@@ -72,6 +72,7 @@ const ActionWrapper = styled.div`
   padding: 42px 82px;
   @media (max-width: 768px) {
     justify-content: center;
+    flex-direction: column;
   }
 `;
 
@@ -79,6 +80,11 @@ const ShareText = styled(Paragraph)`
   font-size: 1.5rem;
   max-width: 370px;
   margin: 0;
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-bottom: 24px;
+    max-width: 100%;
+  }
 `;
 
 const StyledFacebookShare = styled(FacebookShare)`
@@ -119,10 +125,24 @@ const Description = styled(Paragraph)`
   text-align: center;
 `;
 
-const TitleImage = styled.img`
+type TitleImageProps = {
+  src: string;
+};
+
+const TitleImage = styled.div<TitleImageProps>`
   width: 100%;
-  border-radius: 50px;
+  border-radius: 12px;
   margin: 20px 0 60px 0;
+  background-image: ${({ src }) => `url('${src}')`};
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  ${media.down.md}{
+    padding-top: 100%;
+    border-radius: 0;
+    height: unset;
+  }
 `;
 
 const ReadingTime = styled.span`

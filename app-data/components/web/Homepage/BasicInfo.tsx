@@ -67,7 +67,7 @@ export const BasicInfo = () => {
                 </ContentText>
                 <PersonInfo>
                   <PhotoMini src="/images/basic-info/riso.png" />
-                  <strong>MDDr. Richard Vorobeľ, </strong> Chirurg-implantológ
+                  <span><strong>MDDr. Richard Vorobeľ,</strong> {' '}Chirurg-implantológ</span>
                 </PersonInfo>
                 <Link href="/sluzby/proteticka-stomatologia">
                   <StyledPrimaryButton>Čítať viac</StyledPrimaryButton>

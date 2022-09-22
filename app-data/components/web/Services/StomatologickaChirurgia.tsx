@@ -23,7 +23,7 @@ export const StomatologickaChirurgia = () => {
         category="Stomatologická chirurgia"
         title="Bezbolestná, netraumatizujúca a precízna"
         subTitle=""
-        image="/images/services/stomatologicka_chirurgia.png"
+        image="/gifs/services/stomatologia.webp"
       />
       <CustomContainer>
         <ServiceSection>

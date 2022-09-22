@@ -23,7 +23,7 @@ export const ZachovnaStomatologia = () => {
         category="Záchovná stomatológia"
         title="Kráľovná stomatologických odborov"
         subTitle=""
-        image="/images/services/zachovna_stomatologia.png"
+        image="/gifs/services/zachovna.webp"
       />
       <CustomContainer>
         <ServiceContent>

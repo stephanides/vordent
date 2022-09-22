@@ -63,7 +63,7 @@ const selectStyles = {
     ...styles,
     fontSize: '0.875rem',
     color: colors.text,
-    border: `1px solid ${colors.primary} !important`,
+    border: `1px solid #CEE0ED !important`,
     boxShadow: 'none',
     borderRadius: '4px',
     padding: '2px',
@@ -73,7 +73,7 @@ const selectStyles = {
   menu: (styles) => ({
     ...styles,
     maxWidth: '450px',
-    border: `1px solid ${colors.primary} !important`,
+    border: `1px solid #CEE0ED !important`,
     marginTop: '8px',
     borderRadius: '4px',
     fontSize: '0.875rem',

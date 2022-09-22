@@ -17,7 +17,7 @@ export const BielenieZubov = () => {
         title="Získajte žiarivý úsmev"
         subTitle="Rýchla a bezbolestná procedúra pre získanie
 žiarivého úsmevu."
-        image="/images/services/bielenie_zubov.png"
+        image="/gifs/services/bielenie.webp"
       />
       <CustomContainer>
         <ServiceContent>

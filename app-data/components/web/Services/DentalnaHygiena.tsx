@@ -20,7 +20,7 @@ export const DentalnaHygiena = () => {
         category="Dentálna hygiena"
         title="Pre Váš zdravý úsmev"
         subTitle=""
-        image="/images/services/dentalna_hygiena.png"
+        image="/gifs/services/dentalna.webp"
       />
       <CustomContainer>
         <ServiceContent>
