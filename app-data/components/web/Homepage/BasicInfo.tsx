@@ -28,7 +28,7 @@ export const BasicInfo = () => {
             <Image
               width={2400}
               height={1600}
-              layout="responsive"
+              layout="fill"
               src={images[activeTab]}
             />
           </div>

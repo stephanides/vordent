@@ -114,7 +114,7 @@ export const Footer = () => {
         <CustomContainer>
           <Row>
             <StyledCol size={12} md={6} xl={3}>
-              <VordentFooterLogo />
+              <img src="/images/vorder-footer.svg" />
             </StyledCol>
             <StyledCol size={12} md={6} xl={3}>
               <SectionTitle bottom>Zavolajte nám</SectionTitle>

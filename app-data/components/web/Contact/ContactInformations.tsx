@@ -23,7 +23,7 @@ export const ContactInformations = () => {
               <strong>Email:</strong>
             </Text>
             <Text>
-              <a href="mailto:info@vordent.sk">info@vordent.sk</a>
+              <a href="mailto:vordentrecepecia@gmail.com">vordentrecepecia@gmail.com</a>
             </Text>
           </Section>
           <Text>

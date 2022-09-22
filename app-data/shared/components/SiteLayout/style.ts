@@ -71,11 +71,11 @@ export const RightContent = styled.div`
 `;
 
 export const NavButton = styled(Button)`
-  width: 100%;
-  height: 40px;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 1px;
+  padding: 14px 46px;
+  border-radius: 25px;
   background-color: ${colors.primary} !important;
   color: ${colors.textInverted};
   border: none;
@@ -168,9 +168,10 @@ export const MobileNavContentIconHolder = styled.div`
 export const MobileNavContentItem = styled.div`
   position: relative;
   display: flex;
-  padding: 10px 40px;
+  padding: 24px 40px;
   color: ${colors.primary};
-  text-align: left;
+  text-align: center;
+  justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease-out;
   font-weight: 500;
@@ -184,7 +185,7 @@ export const MobileNavSubContentItem = styled.div`
   font-size: 18px;
   padding: 10px 48px;
   color: ${colors.primary};
-  text-align: left;
+  text-align: center;
   cursor: pointer;
   transition: all 0.3s ease-out;
   &:hover {
@@ -212,8 +213,7 @@ type ArrowType = {
 
 export const ArrowHolder = styled.div<ArrowType>`
   display: flex;
-
-  top: 6px;
+  top: 2px;
   margin-left: 6px;
   position: relative;
   svg {

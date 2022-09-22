@@ -18,7 +18,7 @@ export const BlogThumbnail = (props: BlogThumbnailProps) => {
       <ImageWrapper>
         <Link href={`blog/${slug}`}>
           <ImageHolder>
-            <Image layout="fill" objectFit="contain" src={image.path} />
+            <Image layout="fill" objectFit="cover" src={image.path} />
           </ImageHolder>
         </Link>
       </ImageWrapper>

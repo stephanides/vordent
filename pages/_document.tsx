@@ -35,11 +35,17 @@ class MyDocument extends Document {
     return (
       <Html lang="sk" dir="ltr">
         <Head>
+          <link rel="shortcut icon" href="/images/favicon.ico" />
           <meta charSet="utf-8" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
             rel="stylesheet"
+          />
+          <meta name="description" content="Moderná zubná klinika z Popradu" />
+          <meta
+            name="keywords"
+            content="zub, zuby, ambulancia, zubár, bielenie zubov, dentálna hygiena, stomatologická churirgia, protetická stomatológia, záchovná stomatológia, zubné implantáty"
           />
           <Script
             id="cookieyes"

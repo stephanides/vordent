@@ -36,17 +36,12 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Vordent</title>
+        <title>Vordent - Moderná zubná klinika</title>
         <link rel="shortcut icon" href="/images/favicon.ico" />
         {/* Use minimum-scale=1 to enable GPU rasterization */}
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
-        />
-        <meta name="description" content="Moderná zubná klinika z Popradu" />
-        <meta
-          name="keywords"
-          content="zub, zuby, ambulancia, zubár, bielenie zubov, dentálna hygiena, stomatologická churirgia, protetická stomatológia, záchovná stomatológia, zubné implantáty"
         />
       </Head>
       <ApolloProvider>

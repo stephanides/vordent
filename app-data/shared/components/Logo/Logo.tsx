@@ -225,6 +225,10 @@ export const Logo = styled(LogoSvg)`
   top: -35px;
   cursor: pointer;
   z-index: 9999;
+  ${media.down.lg}{
+    position: absolute;
+    top: -45px;
+  }
   svg {
     ${media.down.lg} {
       width: 120px;

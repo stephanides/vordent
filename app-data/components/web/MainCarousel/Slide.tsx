@@ -94,6 +94,7 @@ const SubTitle = styled(Heading2)`
 
 const Description = styled(Paragraph)`
   margin-bottom: 34px;
+  max-width: 450px;
 `;
 
 const Label = styled.div`

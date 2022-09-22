@@ -153,7 +153,6 @@ export const Navigation = () => {
               size={28}
             />
           </MobileNavContentIconHolder>
-
           <MobileNavContent mobileOpen={isOpen}>
             <div>
               <MobileNavLink onClick={toggleServices}>
@@ -167,7 +166,7 @@ export const Navigation = () => {
               <Collapse isOpen={servicesCollapse}>
                 <Link href="/sluzby/zubne-implantaty">
                   <MobileNavLink color="sublink">
-                    <MobileNavSubContentItem className="mt-4">
+                    <MobileNavSubContentItem>
                       Zubné implantáty
                     </MobileNavSubContentItem>
                   </MobileNavLink>
@@ -219,7 +218,7 @@ export const Navigation = () => {
               <Collapse isOpen={aboutUsCollapse}>
                 <Link href="/nas-tim">
                   <MobileNavLink color="sublink">
-                    <MobileNavSubContentItem className="mt-4">
+                    <MobileNavSubContentItem>
                       Náš tím
                     </MobileNavSubContentItem>
                   </MobileNavLink>
@@ -247,12 +246,12 @@ export const Navigation = () => {
                   <MobileNavContentItem>Kontakt</MobileNavContentItem>
                 </MobileNavLink>
               </Link>
-            </div>
-            <BottomContent>
               <Link href="/kontakt">
-                <NavButton>Objednať sa</NavButton>
+                <MobileNavContentItem>
+                  <NavButton>Objednať sa</NavButton>
+                </MobileNavContentItem>
               </Link>
-            </BottomContent>
+            </div>
           </MobileNavContent>
         </MobileNavWrapper>
       </MobileNav>

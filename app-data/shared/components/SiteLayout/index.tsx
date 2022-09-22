@@ -13,7 +13,7 @@ type SiteLayoutProps = {
 };
 
 export const SiteLayout: FC<SiteLayoutProps> = (props) => {
-  const { title = 'Vordent', currentUrl, description, previewImage } = props;
+  const { title = 'Vordent - Moderná zubná klinika', currentUrl, description, previewImage } = props;
 
   return (
     <>
