@@ -14,7 +14,7 @@ type BlogThumbnailProps = {
 export const BlogThumbnail = (props: BlogThumbnailProps) => {
   const { image, readingTime, title, description, slug, category } = props.blog;
   return (
-    <StyledCol size={12} lg={4} md={6} data-aos="fade-up" data-aos-once="true">
+    <div>
       <ImageWrapper>
         <Link href={`blog/${slug}`}>
           <ImageHolder>
@@ -40,7 +40,7 @@ export const BlogThumbnail = (props: BlogThumbnailProps) => {
           <ArrowRight />
         </ReadMore>
       </Link>
-    </StyledCol>
+    </div>
   );
 };
 

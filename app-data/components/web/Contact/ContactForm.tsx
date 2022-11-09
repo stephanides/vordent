@@ -247,7 +247,7 @@ export const ContactForm = () => {
           * vyšie súhlasíte, že spoločnosť Aesculap dent, s.r.o., a VORDENT
           s.r.o. budú spracúvať osobné údaje výhradne za účelom vybavenia Vašej
           objednávky. Viac informácií ochrana osobných údajov.
-          <Patient src="/images/contact-patient.png" />
+          <Patient src="/images/contact-patient.svg" />
         </InfoText>
         <SubmitButton
           disabled={isLoading || !agree}

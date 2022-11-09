@@ -24,6 +24,7 @@ export const MobileNav = styled.div`
     display: block;
     z-index: 999;
     height: 80px;
+    border-bottom: 1px solid ${colors.primaryLight};
   }
 `;
 

@@ -5,7 +5,7 @@ import { MapComponent } from './Map';
 export const ContactInformations = () => {
   return (
     <Wrapper>
-      <UpperImage src="/images/contact-info.png" />
+      <UpperImage src="/images/contact-info.svg" />
       <Content>
         <Item>
           <Title>MUDr. Martin Vorobeľ</Title>

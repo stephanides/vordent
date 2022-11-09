@@ -40,7 +40,7 @@ export const BlogsContent: FC<BlogsContentProps> = (props) => {
       <BlogsWrapper>
         <Row>
           {blogsToShow.map((blog: Blog) => (
-            <BlogThumbnail blog={blog} key={blog._id} />
+            <StyledCol size={12} lg={4} md={6}> <BlogThumbnail blog={blog} key={blog._id} /></StyledCol>
           ))}
         </Row>
       </BlogsWrapper>
@@ -58,4 +58,8 @@ export const BlogsContent: FC<BlogsContentProps> = (props) => {
 
 const BlogsWrapper = styled.div`
   margin-top: 40px;
+`;
+
+const StyledCol = styled(Col)`
+  margin-bottom: 32px;
 `;

@@ -25,7 +25,7 @@ export const AmbulanceEquipment = () => {
             </Box>
           </Col>
           <Col lg={6} md={12}>
-            <Ambulance src="/images/our-team/ambulance.png" alt="Ambulance" />
+            <Ambulance src="/images/our-team/ambulance.svg" alt="Ambulance" />
           </Col>
         </Row>
       </Wrapper>

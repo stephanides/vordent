@@ -13,6 +13,7 @@ import {
   media,
 } from '../../../shared/design';
 import { Blog } from '../../../shared/types';
+import { BlogsCarousel } from './BlogsCarousel';
 
 export const HomepageBlog = () => {
   const { error, loading, data } = useQuery(BLOGS_QUERY);
@@ -35,11 +36,7 @@ export const HomepageBlog = () => {
           <ZoomOrnament />
         </SvgHolder>
         <SectionTitle>Blog</SectionTitle>
-        <Row>
-          {blogsToShow.map((blog: Blog) => (
-            <BlogThumbnail blog={blog} key={blog._id} />
-          ))}
-        </Row>
+        <BlogsCarousel blogs={blogsToShow} />
         <Link href="/blog">
           <StyledPrimaryButton>Všetky blogy</StyledPrimaryButton>
         </Link>
@@ -52,6 +49,12 @@ const Wrapper = styled.div`
   ${sectionPadding};
   border-top: 2px solid rgba(0, 95, 166, 0.19);
   position: relative;
+`;
+
+const BlogsWrapper = styled.div`
+  ${media.down.md} {
+    display: none;
+  }
 `;
 
 const SvgHolder = styled.div`

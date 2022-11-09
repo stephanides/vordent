@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
 import { Row, Col } from 'reactstrap';
 import styled from 'styled-components';
@@ -13,9 +12,9 @@ import {
 } from '../../../shared/design';
 
 const images = [
-  '/images/basic-info/1.png',
-  '/images/basic-info/2.png',
-  '/images/basic-info/3.png',
+  '/images/basic-info/podpora.svg',
+  '/images/basic-info/vybavenie.svg',
+  '/images/basic-info/nas_tim.svg',
 ];
 
 export const BasicInfo = () => {
@@ -24,14 +23,7 @@ export const BasicInfo = () => {
     <StyledContainer>
       <StyledRow>
         <Col lg={6} md={12}>
-          <div style={{ width: '100%' }}>
-            <Image
-              width={2400}
-              height={1600}
-              layout="fill"
-              src={images[activeTab]}
-            />
-          </div>
+          <StyledImage src={images[activeTab]} />
         </Col>
         <Col lg={6} md={12}>
           <Content>
@@ -67,7 +59,9 @@ export const BasicInfo = () => {
                 </ContentText>
                 <PersonInfo>
                   <PhotoMini src="/images/basic-info/riso.png" />
-                  <span><strong>MDDr. Richard Vorobeľ,</strong> {' '}Chirurg-implantológ</span>
+                  <span>
+                    <strong>MDDr. Richard Vorobeľ,</strong> Chirurg-implantológ
+                  </span>
                 </PersonInfo>
                 <Link href="/sluzby/proteticka-stomatologia">
                   <StyledPrimaryButton>Čítať viac</StyledPrimaryButton>
@@ -107,6 +101,11 @@ export const BasicInfo = () => {
   );
 };
 
+const StyledImage = styled.img`
+  width: 100%;
+  border-radius: 15px;
+`;
+
 const StyledContainer = styled(CustomContainer)`
   position: relative;
   margin-bottom: 90px;
@@ -125,7 +124,15 @@ const StyledRow = styled(Row)`
 const TabsPicker = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
+  ${media.down.lg}{
+    margin-top: 50px;
+  }
+  ${media.down.sm}{
+    margin-top: 0px;
+  }
+  @media(max-width: 400px){
+    margin-top: 40px;
+  }
 `;
 
 const StyledPrimaryButton = styled(PrimaryButton)`

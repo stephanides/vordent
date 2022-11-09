@@ -12,6 +12,7 @@ import {
   ZoomOrnament,
 } from '../../../shared/design';
 import { Blog } from '../../../shared/types';
+import { BlogsCarousel } from '../../../components/web/Homepage/BlogsCarousel';
 
 type RelatedBlogsProps = {
   actualBlog: string;
@@ -40,11 +41,7 @@ export const RelatedBlogs = (props: RelatedBlogsProps) => {
         <ZoomOrnament />
       </SvgHolder>
       <CustomContainer>
-        <Row>
-          {blogsToShow.map((blog: Blog) => (
-            <BlogThumbnail blog={blog} />
-          ))}
-        </Row>
+        <BlogsCarousel blogs={blogsToShow} />
       </CustomContainer>
       <Link href="/blog">
         <StyledPrimaryButton>Všetky blogy</StyledPrimaryButton>
